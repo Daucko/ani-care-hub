@@ -4,10 +4,14 @@ import { cn } from '../utils/cn';
 import { IoSearch } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
 import SearchModal from './SearchModal';
+import { RiMenuFill } from 'react-icons/ri';
+import { TbX } from 'react-icons/tb';
 
 // import classes from './HomeNav.module.css'
 
 export function HomeNav({ onSearchClick }) {
+  const [showMenu, setShowMenu] = useState(false);
+
   //   const [popSearchModal, setPopSearchModal] = useState(false);
 
   //   const handleSearchModal = () => {
@@ -15,26 +19,60 @@ export function HomeNav({ onSearchClick }) {
   //     onSearchClick = true;
   //   };
 
+  const toggleSmallScreenMenu = () => {
+    setShowMenu(!showMenu);
+    console.log(showMenu);
+  };
+
   return (
-    <div className="relative w-full flex items-center justify-between px-20">
-      <div className="cursor-pointer flex items-center justify-center space-x-2">
-        <img src="/favicon.ico" alt="" />
-        <h1 className="text-xl font-semibold text-[#2D3250]">AniCareHub</h1>
-      </div>
-      <div className="w-1/2 flex items-center justify-between">
-        <Navbar className="" />
-        <div className="cursor-pointer" onClick={onSearchClick}>
-          <IoSearch className="w-10 h-10 cursor-pointer" />
-          
+    <div>
+      <div className="relative w-full flex items-center justify-between px-5 sm:px-20">
+        <div className="cursor-pointer flex items-center justify-center space-x-2">
+          <img src="/favicon.ico" alt="" />
+          <h1 className="text-xl font-semibold text-[#2D3250] hidden sm:block">
+            AniCareHub
+          </h1>
         </div>
-        <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
-        <button className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white">
-          Register a Service
-        </button>
-        <span className="text-xl text-[#2D3250] font-semibold cursor-pointer">
-          Sign in <FaArrowRight className="w-5 h-5 inline-block" />
-        </span>
+        <div className="w-1/2 hidden sm:flex items-center justify-between">
+          <Navbar className="" />
+          <div className="cursor-pointer" onClick={onSearchClick}>
+            <IoSearch className="w-10 h-10 cursor-pointer" />
+          </div>
+          <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
+          <button className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white">
+            Register a Service
+          </button>
+          <span className="text-xl text-[#2D3250] font-semibold cursor-pointer">
+            Sign in <FaArrowRight className="w-5 h-5 inline-block" />
+          </span>
+        </div>
+        <div className="absolute top-0 right-5" onClick={toggleSmallScreenMenu}>
+          <RiMenuFill className="h-10 w-10" />
+        </div>
       </div>
+      {showMenu && (
+        <div className="relative bg-white  -top-16 left-0 w-[100vw] h-[100vh] flex-col sm:hidden justify-center space-y-8">
+          <Navbar className="" />
+          <div
+            className="cursor-pointer ml-[47%] block"
+            onClick={onSearchClick}
+          >
+            <IoSearch className="w-10 h-10 cursor-pointer" />
+          </div>
+          <button className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white ml-[30%]">
+            Register a Service
+          </button>
+          <span className="text-xl text-[#2D3250] font-semibold cursor-pointer block ml-[42%]">
+            Sign in <FaArrowRight className="w-5 h-5 inline-block" />
+          </span>
+          <div
+            className="absolute text-2xl -top-4 right-8 "
+            onClick={toggleSmallScreenMenu}
+          >
+            {showMenu && <TbX className="" />}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
