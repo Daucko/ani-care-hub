@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
-import { HoveredLink, Menu, MenuItem, ProductItem } from '../ui/NavBarMenu';
-import { cn } from '../utils/cn';
+import { HoveredLink, Menu, MenuItem, ProductItem } from './NavBarMenu';
+import { cn } from '../../utils/cn';
 import { IoSearch } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
-import SearchModal from './SearchModal';
+import SearchModal from '../../pages/SearchComp/SearchModal';
 import { RiMenuFill } from 'react-icons/ri';
 import { TbX } from 'react-icons/tb';
-
-// import classes from './HomeNav.module.css'
+import { Link } from 'react-router-dom';
 
 export function HomeNav({ onSearchClick }) {
   const [showMenu, setShowMenu] = useState(false);
-
-  //   const [popSearchModal, setPopSearchModal] = useState(false);
-
-  //   const handleSearchModal = () => {
-  //     setPopSearchModal(true);
-  //     onSearchClick = true;
-  //   };
 
   const toggleSmallScreenMenu = () => {
     setShowMenu(!showMenu);
@@ -39,9 +31,12 @@ export function HomeNav({ onSearchClick }) {
             <IoSearch className="w-10 h-10 cursor-pointer" />
           </div>
           <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
-          <button className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white">
+          <Link
+            to="/register-service"
+            className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white"
+          >
             Register a Service
-          </button>
+          </Link>
           <span className="text-xl text-[#2D3250] font-semibold cursor-pointer">
             Sign in <FaArrowRight className="w-5 h-5 inline-block" />
           </span>

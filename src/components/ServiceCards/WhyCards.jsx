@@ -1,7 +1,7 @@
 // import { cn } from '../utils/cn';
 import React from 'react';
 import PicsSlideShow from './PicsSlideShow';
-import { BentoGrid, BentoGridItem } from '../ui/BentoGrid';
+import { BentoGrid, BentoGridItem } from './BentoGrid';
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Map from '../ui/Map';
-import DocsList from '../components/DocsList';
+import Map from './Map';
+import DocsList from './DocsList';
 
 const apikey = 'WbssaADa3cmwlq4flQ8_tXKtOjWMG81mnfe7o3gjbHM';
 
@@ -17,7 +17,8 @@ const ContactSection = () => {
   const doctorsList = [
     {
       name: 'The Fish Market',
-      location: { lat: 64.1508, lng: -21.9536 },
+      // location: { lat: 64.1508, lng: -21.9536 },
+      location: { lat: 6.71162, lng: 3.27605 },
     },
     {
       name: 'Bæjarins Beztu Pylsur',

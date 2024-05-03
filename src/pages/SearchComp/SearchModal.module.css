@@ -13,11 +13,12 @@
 }
 
 .modal {
+  position: relative;
   border: none;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
 }
 
@@ -27,5 +28,7 @@ input {
   caret-color: red;
   color: #2d3250;
   font-size: 30px;
-  z-index: 1;
+  z-index: 3;
+  padding: 2rem;
+  border-radius: 5px;
 }

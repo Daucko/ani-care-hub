@@ -1,13 +1,13 @@
 import { Form, Link, useNavigate } from 'react-router-dom';
-import { HomeNav } from './HomeNav';
+import { HomeNav } from '../components/HomeNav/HomeNav';
 import { useState } from 'react';
-import SearchModal from './SearchModal';
-import Welcome from '../ui/Welcome';
-import { BentoGridDemo } from './WhyCards';
-import DoctorsSection from '../ui/DoctorsSection';
-import { DoctorCard } from './DoctorCard';
-import ContactSection from '../ui/ContactSection';
-import HomeFooter from '../ui/HomeFooter';
+import SearchModal from './SearchComp/SearchModal';
+import Welcome from '../components/WelcomeSection/Welcome';
+import { BentoGridDemo } from '../components/ServiceCards/WhyCards';
+import DoctorsSection from '../components/DocSection/DoctorsSection';
+import { DoctorCard } from '../components/DocSection/DoctorCard';
+import ContactSection from '../components/ContactSection/ContactSection';
+import HomeFooter from '../components/HomeFooter';
 
 const HomePage = () => {
   const [popSearch, setPopSearch] = useState(false);
@@ -20,11 +20,12 @@ const HomePage = () => {
 
   if (popSearch) {
     return (
-      <SearchModal>
-        <Form action="post" className="z-50 w-30 h-20">
-          <input type="text" name="search" />
-        </Form>
-      </SearchModal>
+      <SearchModal />
+      //     <SearchModal>
+      //       <Form action="post" className="z-50 w-30 h-20">
+      //         <input type="text" name="search" />
+      //       </Form>
+      //     </SearchModal>
     );
   }
 

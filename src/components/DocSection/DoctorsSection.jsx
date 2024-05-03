@@ -1,4 +1,4 @@
-import { DoctorCard } from '../components/DoctorCard';
+import { DoctorCard } from './DoctorCard';
 
 const DoctorsSection = () => {
   return (
