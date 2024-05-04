@@ -13,12 +13,6 @@ export function SignupForm() {
   };
   return (
     <div className="max-w-xl w-full mx-auto mt-20 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <Link
-        to="/register-service"
-        className="absolute top-10 left-10 pl-5 pt-3 block bg-[#F6B17A] w-20 h-16 rounded-md"
-      >
-        <BiLeftArrowAlt className="w-10 h-10" />
-      </Link>
       <h2 className="font-bold text-xl text-[#2D3250] dark:text-neutral-200">
         Welcome to Aceternity
       </h2>
@@ -69,16 +63,6 @@ export function SignupForm() {
             Password
           </Label>
           <Input id="password" placeholder="••••••••" type="password" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="twitterpassword" className="text-[#2D3250]">
-            Your twitter password
-          </Label>
-          <Input
-            id="twitterpassword"
-            placeholder="••••••••"
-            type="twitterpassword"
-          />
         </LabelInputContainer>
 
         <button

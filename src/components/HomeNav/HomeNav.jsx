@@ -3,7 +3,6 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from './NavBarMenu';
 import { cn } from '../../utils/cn';
 import { IoSearch } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
-import SearchModal from '../../pages/SearchComp/SearchModal';
 import { RiMenuFill } from 'react-icons/ri';
 import { TbX } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
@@ -19,12 +18,15 @@ export function HomeNav({ onSearchClick }) {
   return (
     <div>
       <div className="relative w-full flex items-center justify-between px-5 sm:px-20">
-        <div className="cursor-pointer flex items-center justify-center space-x-2">
+        <Link
+          to="/"
+          className="cursor-pointer flex items-center justify-center space-x-2"
+        >
           <img src="/favicon.ico" alt="" />
           <h1 className="text-xl font-semibold text-[#2D3250] hidden sm:block">
             AniCareHub
           </h1>
-        </div>
+        </Link>
         <div className="w-1/2 hidden sm:flex items-center justify-between">
           <Navbar className="" />
           <div className="cursor-pointer" onClick={onSearchClick}>
@@ -41,7 +43,10 @@ export function HomeNav({ onSearchClick }) {
             Sign in <FaArrowRight className="w-5 h-5 inline-block" />
           </span>
         </div>
-        <div className="absolute top-0 right-5" onClick={toggleSmallScreenMenu}>
+        <div
+          className="absolute block sm:hidden top-0 right-5 "
+          onClick={toggleSmallScreenMenu}
+        >
           <RiMenuFill className="h-10 w-10" />
         </div>
       </div>
@@ -61,10 +66,10 @@ export function HomeNav({ onSearchClick }) {
             Sign in <FaArrowRight className="w-5 h-5 inline-block" />
           </span>
           <div
-            className="absolute text-2xl -top-4 right-8 "
+            className="absolute text-2xl -top-4 right-2 block sm:hidden "
             onClick={toggleSmallScreenMenu}
           >
-            {showMenu && <TbX className="" />}
+            <TbX className="" />
           </div>
         </div>
       )}
@@ -89,37 +94,37 @@ function Navbar({ className }) {
         <MenuItem setActive={setActive} active={active} item="Service">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
+              title="Veterinarian"
+              href="#"
+              src="/images/image6.jpeg"
+              description="A vet basically treats and care for animals."
             />
             <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
+              title="Dog School"
+              href="#"
+              src="/images/image5.jpg"
+              description="Let your dogs receive training and behavioural guidance"
             />
             <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              title="Dog Boarding Facility"
+              href="#"
+              src="/images/image.png"
+              description="Let your dog be well taken care of while you are away."
             />
             <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              title="Dog Sale"
+              href="#"
+              src="/images/image1.jpeg"
+              description="Sell those cute puppies."
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <MenuItem setActive={setActive} active={active} item="Buy a Pet">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            <HoveredLink href="/hobby">Dog</HoveredLink>
+            <HoveredLink href="/individual">Cat</HoveredLink>
+            {/* <HoveredLink href="/team">Team</HoveredLink> */}
+            {/* <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
         </MenuItem>
       </Menu>

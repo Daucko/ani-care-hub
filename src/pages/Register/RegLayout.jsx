@@ -1,14 +1,18 @@
-import { BiLeftArrowAlt } from 'react-icons/bi';
-
-import { Outlet } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router';
+import { HomeNav } from '../../components/HomeNav/HomeNav';
 
 const Layout = () => {
+  const navigate = useNavigate();
+
+  const onSearchClick = () => {
+    navigate('/search');
+  };
+
   return (
-    <main>
-      <h1 className="text-6xl text-center mt-10 font-semibold text-[#]">
-        What Service are you bringing on board?
-      </h1>
+    <main className="bg-[#7077A1] pt-5 pb-14 min-h-[100%]">
+      <nav className="">
+        <HomeNav onSearchClick={onSearchClick} />
+      </nav>
 
       <Outlet />
     </main>
