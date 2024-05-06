@@ -9,6 +9,7 @@ import RegisterService from './pages/Register/RegisterService';
 import RegLayout from './pages/Register/RegLayout';
 import { DocSignupForm } from './pages/DocSignupForm';
 import { SignupForm } from './pages/SignupForm';
+import SignIn from './pages/signin/SignIn';
 
 const router = createBrowserRouter([
   { path: '/', element: <HomePage /> },
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: '/register-service/signup', element: <SignupForm /> },
     ],
   },
+  { path: '/sign-in', element: <SignIn /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -39,9 +39,12 @@ export function HomeNav({ onSearchClick }) {
           >
             Register a Service
           </Link>
-          <span className="text-xl text-[#2D3250] font-semibold cursor-pointer">
+          <Link
+            to="/sign-in"
+            className="text-xl text-[#2D3250] font-semibold cursor-pointer"
+          >
             Sign in <FaArrowRight className="w-5 h-5 inline-block" />
-          </span>
+          </Link>
         </div>
         <div
           className="absolute block sm:hidden top-0 right-5 "
