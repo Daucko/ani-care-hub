@@ -1,7 +1,7 @@
 import React from 'react';
-import { Label } from '../components/SignUp/Label';
-import { Input } from '../components/SignUp/Input';
-import { cn } from '../utils/cn';
+import { Label } from '../../components/SignUp/Label';
+import { Input } from '../../components/SignUp/Input';
+import { cn } from '../../utils/cn';
 
 import { BiLeftArrowAlt } from 'react-icons/bi';
 

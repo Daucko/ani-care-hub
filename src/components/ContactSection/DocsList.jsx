@@ -5,11 +5,15 @@ function DocEntry(props) {
   // Add basic styling for each restaurant entry
   const entryStyle = {
     display: 'inline-block',
-    padding: '10px',
+    padding: '6px',
     margin: '5px',
-    border: '1px solid gray',
+    border: '1px solid #2D3250',
     borderRadius: '5px',
     cursor: 'pointer',
+    textAlign: 'center',
+    backgroundColor: '#F6B17A',
+    fontSize: '1.2rem',
+    color: '#2D3250',
   };
 
   return (
@@ -31,7 +35,7 @@ function DocsList(props) {
     );
   });
   return (
-    <div id="restaurant-list" className="grid border-2 border-red-600">
+    <div id="restaurant-list" className="grid bg-[#7077A1]">
       {list}
     </div>
   );
