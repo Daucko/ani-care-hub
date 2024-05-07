@@ -8,22 +8,36 @@ import fifthImg from '/images/image4.jpeg';
 import sixthImg from '/images/image5.jpeg';
 import seventhImg from '/images/image6.jpeg';
 import eightImg from '/images/image7.jpeg';
-import ninthImg from '/images/image4.jpg';
-import tenthImg from '/images/image5.jpg';
+import ninthImg from '/images/image8.jpg';
+import tenthImg from '/images/image9.jpg';
+import eleventhImg from '/images/image10.jpg';
+import twelfthImg from '/images/image11.jpg';
+import thirteenthImg from '/images/image12.jpg';
+import fourteenthImg from '/images/image13.jpg';
+import fifteenthImg from '/images/image14.jpg';
+import sixteenthImg from '/images/image15.jpg';
+import seventeenthImg from '/images/image16.jpg';
 
 import classes from './PicsSlideShow.module.css';
 
 const images = [
-  { image: firstImg, alt: 'A delicious, juicy burger' },
-  { image: secondImg, alt: 'A delicious, spicy curry' },
-  { image: thirdImg, alt: 'Steamed dumplings' },
-  { image: fourthImg, alt: 'Mac and cheese' },
-  { image: fifthImg, alt: 'A delicious pizza' },
-  { image: sixthImg, alt: 'A delicious schnitzel' },
-  { image: seventhImg, alt: 'A delicious tomato salad' },
-  { image: eightImg, alt: 'A delicious tomato salad' },
-  { image: ninthImg, alt: 'A delicious tomato salad' },
-  { image: tenthImg, alt: 'A delicious tomato salad' },
+  { image: firstImg, alt: 'A dog on sick bed' },
+  { image: secondImg, alt: 'Two sheeps being held' },
+  { image: thirdImg, alt: 'Dog lying on a table' },
+  { image: fourthImg, alt: 'A horse' },
+  { image: fifthImg, alt: 'Two monkeys' },
+  { image: sixthImg, alt: 'A dog looking at a needle' },
+  { image: seventhImg, alt: 'A vet on white coat' },
+  { image: eightImg, alt: 'A doctor holding stethoscope' },
+  { image: ninthImg, alt: 'Rubbing cat fur' },
+  { image: tenthImg, alt: 'A thinking dog' },
+  { image: eleventhImg, alt: 'A black and white cat' },
+  { image: twelfthImg, alt: 'An observant cat' },
+  { image: thirteenthImg, alt: 'A dog panting' },
+  { image: fourteenthImg, alt: 'A lying cat' },
+  { image: fifteenthImg, alt: 'An attentive dog' },
+  { image: sixteenthImg, alt: 'A playful cat' },
+  { image: seventeenthImg, alt: 'An obedient dog' },
 ];
 
 export default function PicsSlideShow() {
@@ -34,7 +48,7 @@ export default function PicsSlideShow() {
       setCurrentImageIndex((prevIndex) =>
         prevIndex < images.length - 1 ? prevIndex + 1 : 0
       );
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
