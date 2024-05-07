@@ -17,6 +17,8 @@ import fourteenthImg from '/images/image13.jpg';
 import fifteenthImg from '/images/image14.jpg';
 import sixteenthImg from '/images/image15.jpg';
 import seventeenthImg from '/images/image16.jpg';
+import eighteenthImg from '/images/image17.jpg';
+import nineteenthImg from '/images/image18.jpg';
 
 import classes from './PicsSlideShow.module.css';
 
@@ -38,6 +40,8 @@ const images = [
   { image: fifteenthImg, alt: 'An attentive dog' },
   { image: sixteenthImg, alt: 'A playful cat' },
   { image: seventeenthImg, alt: 'An obedient dog' },
+  { image: eighteenthImg, alt: 'An obedient dog' },
+  { image: nineteenthImg, alt: 'An obedient dog' },
 ];
 
 export default function PicsSlideShow() {

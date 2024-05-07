@@ -45,7 +45,7 @@ const VetPic = () => (
 const BoardingPic = () => (
   <div className="flex flex-1 w-full h-full min-h-[15rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
-      src="/images/image2.jpeg"
+      src="/images/image14.jpg"
       alt=""
       className="object-cover w-full rounded-xl"
     />
@@ -54,7 +54,7 @@ const BoardingPic = () => (
 const School = () => (
   <div className="flex flex-1 w-full h-full min-h-[15rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
-      src="/images/image5.jpg"
+      src="/images/image9.jpg"
       alt=""
       className="object-cover w-full rounded-xl"
     />

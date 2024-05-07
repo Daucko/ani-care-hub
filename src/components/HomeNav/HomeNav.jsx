@@ -124,8 +124,8 @@ function Navbar({ className }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Buy a Pet">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Dog</HoveredLink>
-            <HoveredLink href="/individual">Cat</HoveredLink>
+            <HoveredLink to="/buy-a-pet">Dog</HoveredLink>
+            <HoveredLink to="/individual">Cat</HoveredLink>
             {/* <HoveredLink href="/team">Team</HoveredLink> */}
             {/* <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
