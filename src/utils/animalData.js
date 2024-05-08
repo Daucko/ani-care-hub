@@ -1,4 +1,4 @@
-const dogs = [
+export const Animals = [
   {
     id: 1,
     title: 'Rottweiler',
@@ -44,15 +44,40 @@ const dogs = [
     price: '#50,000',
     image: 'images/image16.jpg',
   },
-];
-
-const cats = [
   {
-    id: 1,
+    id: 6,
+    title: 'Turkish Van Cat',
+    description:
+      ' The Turkish Van is a striking and athletic cat breed characterized by its unique water-resistant coat, captivating amber eyes, and affectionate yet independent nature. ',
+    animalType: 'cat',
+    price: '#20,000',
+    image: 'images/image10.jpg',
+  },
+  {
+    id: 7,
+    title: 'Tabby Cat',
+    description:
+      ' A tabby cat is a domestic feline characterized by its distinctive coat pattern featuring stripes, swirls, or spots, often with an "M" shape on its forehead. ',
+    animalType: 'cat',
+    price: '#20,000',
+    image: 'images/image11.jpg',
+  },
+  {
+    id: 8,
+    title: 'Egyptian Mau',
+    description:
+      ' The Egyptian Mau is a graceful and elegant cat breed known for its distinctive spotted coat and captivating green eyes. ',
+    animalType: 'cat',
+    price: '#20,000',
+    image: 'images/image15.jpg',
+  },
+  {
+    id: 9,
     title: 'Turkish Van',
     description:
       ' The Turkish Van is a striking and athletic cat breed characterized by its unique water-resistant coat, captivating amber eyes, and affectionate yet independent nature. ',
     animalType: 'cat',
     price: '#20,000',
+    image: 'images/image10.jpg',
   },
 ];

@@ -12,6 +12,7 @@ import { SignupForm } from './pages/signupform/SignupForm';
 import SignIn from './pages/signin/SignIn';
 import SiteNav from './components/layout/SiteNav';
 import { BuyAPet } from './pages/buypet/BuyAPet';
+import PetLayout from './pages/buypet/PetLayout';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,10 @@ const router = createBrowserRouter([
         ],
       },
       { path: '/sign-in', element: <SignIn /> },
-      { path: '/buy-a-pet', element: <BuyAPet /> },
+      {
+        path: '/:pet',
+        element: <BuyAPet />,
+      },
     ],
   },
 ]);

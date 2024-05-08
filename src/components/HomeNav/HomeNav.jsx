@@ -80,7 +80,7 @@ export function HomeNav({ onSearchClick }) {
   );
 }
 
-function Navbar({ className }) {
+function Navbar({ className, pet }) {
   const [active, setActive] = useState(null);
 
   return (
@@ -124,8 +124,8 @@ function Navbar({ className }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Buy a Pet">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink to="/buy-a-pet">Dog</HoveredLink>
-            <HoveredLink to="/individual">Cat</HoveredLink>
+            <HoveredLink to={pet === 'dog' && `/${pet}`}>Dog</HoveredLink>
+            <HoveredLink to={pet === 'cat' && `/${pet}`}>Cat</HoveredLink>
             {/* <HoveredLink href="/team">Team</HoveredLink> */}
             {/* <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
