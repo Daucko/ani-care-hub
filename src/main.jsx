@@ -12,7 +12,8 @@ import { SignupForm } from './pages/signupform/SignupForm';
 import SignIn from './pages/signin/SignIn';
 import SiteNav from './components/layout/SiteNav';
 import { BuyAPet } from './pages/buypet/BuyAPet';
-import { DogSchool } from './pages/doctorsPage/DogSchool';
+import { DogSchool } from './pages/DogSchool/DogSchool';
+import DogBoarding from './pages/DogBoarding/DogBording';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       { path: '/sign-in', element: <SignIn /> },
       { path: '/:pet', element: <BuyAPet /> },
       { path: '/dog-school', element: <DogSchool /> },
+      { path: '/dog-boarding', element: <DogBoarding /> },
     ],
   },
 ]);

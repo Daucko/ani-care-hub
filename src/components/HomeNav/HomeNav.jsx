@@ -110,7 +110,7 @@ function Navbar({ className, pet }) {
             />
             <ProductItem
               title="Dog Boarding Facility"
-              href="/cat"
+              href="/dog-boarding"
               src="/images/image.png"
               description="Let your dog be well taken care of while you are away."
             />
