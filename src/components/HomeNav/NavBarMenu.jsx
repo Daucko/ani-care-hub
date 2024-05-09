@@ -65,7 +65,7 @@ export const Menu = ({ setActive, children }) => {
 
 export const ProductItem = ({ title, description, href, src }) => {
   return (
-    <Link href={href} className="flex space-x-2">
+    <Link to={href} className="flex space-x-2">
       <img
         src={src}
         width={120}

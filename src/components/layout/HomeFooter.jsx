@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const HomeFooter = () => {
   return (
     <main className="border-t-2 border-[#2D3250]">
-      <section className="flex items-center justify-between bg-[#7077A1] px-20 py-7">
+      <section className="flex items-center justify-center sm:justify-between bg-[#7077A1] px-20 py-7">
         <p className="text-white">&copy; Copyright. All rights reserved.</p>
         <div className="flex justify-center items-center gap-x-5 mt-10">
           <Link className="bg-[#2D3250] p-3 rounded-full">

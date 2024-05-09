@@ -98,25 +98,25 @@ function Navbar({ className, pet }) {
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Veterinarian"
-              href="#"
+              href="/dog"
               src="/images/image6.jpeg"
               description="A vet basically treats and care for animals."
             />
             <ProductItem
               title="Dog School"
-              href="#"
-              src="/images/image5.jpg"
+              href="/dog"
+              src="/images/image9.jpg"
               description="Let your dogs receive training and behavioural guidance"
             />
             <ProductItem
               title="Dog Boarding Facility"
-              href="#"
+              href="/cat"
               src="/images/image.png"
               description="Let your dog be well taken care of while you are away."
             />
             <ProductItem
               title="Dog Sale"
-              href="#"
+              href="/dog-school"
               src="/images/image1.jpeg"
               description="Sell those cute puppies."
             />
@@ -124,8 +124,8 @@ function Navbar({ className, pet }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Buy a Pet">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink to={pet === 'dog' && `/${pet}`}>Dog</HoveredLink>
-            <HoveredLink to={pet === 'cat' && `/${pet}`}>Cat</HoveredLink>
+            <HoveredLink to={`/dog`}>Dog</HoveredLink>
+            <HoveredLink to={`/cat`}>Cat</HoveredLink>
             {/* <HoveredLink href="/team">Team</HoveredLink> */}
             {/* <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
