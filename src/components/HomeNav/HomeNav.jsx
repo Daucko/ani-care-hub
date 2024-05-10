@@ -6,6 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { RiMenuFill } from 'react-icons/ri';
 import { TbX } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
+import { Vets } from '../../utils/dummyData';
 
 export function HomeNav({ onSearchClick }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -88,23 +89,26 @@ function Navbar({ className, pet }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Doctors">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
+            {/* <HoveredLink href="/web-dev">Web Development</HoveredLink>
             <HoveredLink href="/interface-design">Interface Design</HoveredLink>
             <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="/branding">Branding</HoveredLink> */}
+            {Vets.map((vet) => {
+              return <HoveredLink href="/vets">{vet.name}</HoveredLink>;
+            })}
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Service">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Veterinarian"
-              href="/dog"
+              href="/vets"
               src="/images/image6.jpeg"
               description="A vet basically treats and care for animals."
             />
             <ProductItem
               title="Dog School"
-              href="/dog"
+              href="/dog-school"
               src="/images/image9.jpg"
               description="Let your dogs receive training and behavioural guidance"
             />
@@ -116,7 +120,7 @@ function Navbar({ className, pet }) {
             />
             <ProductItem
               title="Dog Sale"
-              href="/dog-school"
+              href="/dog"
               src="/images/image1.jpeg"
               description="Sell those cute puppies."
             />

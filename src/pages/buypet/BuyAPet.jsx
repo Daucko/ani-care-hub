@@ -1,6 +1,6 @@
 import React from 'react';
 import { BackgroundGradient } from '../../components/buypet/BackgroundGradient';
-import { Animals } from '../../utils/animalData';
+import { Animals } from '../../utils/dummyData';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
