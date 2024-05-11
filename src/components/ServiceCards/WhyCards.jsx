@@ -29,12 +29,12 @@ export function BentoGridDemo() {
   );
 }
 const AllPics = () => (
-  <div className="flex flex-1 w-full h-full min-h-[15rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 ">
+  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 ">
     <PicsSlideShow />
   </div>
 );
 const VetPic = () => (
-  <div className="flex flex-1 w-full h-full min-h-[15rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
       src="/images/image5.jpeg"
       alt=""
@@ -43,7 +43,7 @@ const VetPic = () => (
   </div>
 );
 const BoardingPic = () => (
-  <div className="flex flex-1 w-full h-full min-h-[15rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
       src="/images/image14.jpg"
       alt=""
@@ -52,7 +52,7 @@ const BoardingPic = () => (
   </div>
 );
 const School = () => (
-  <div className="flex flex-1 w-full h-full min-h-[15rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
       src="/images/image9.jpg"
       alt=""

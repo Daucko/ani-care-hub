@@ -31,20 +31,20 @@ export function HomeNav({ onSearchClick }) {
         <div className="w-1/2 hidden sm:flex items-center justify-between">
           <Navbar className="" />
           <div className="cursor-pointer" onClick={onSearchClick}>
-            <IoSearch className="w-10 h-10 cursor-pointer" />
+            <IoSearch className="w-5 h-5 cursor-pointer" />
           </div>
           <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
           <Link
             to="/register-service"
-            className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white"
+            className="bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 dark:text-white"
           >
             Register a Service
           </Link>
           <Link
             to="/sign-in"
-            className="text-xl text-[#2D3250] font-semibold cursor-pointer"
+            className="text-[15px] text-[#2D3250] font-semibold cursor-pointer"
           >
-            Sign in <FaArrowRight className="w-5 h-5 inline-block" />
+            Sign in <FaArrowRight className="w-3 h-3 inline-block" />
           </Link>
         </div>
         <div
@@ -89,12 +89,12 @@ function Navbar({ className, pet }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Doctors">
           <div className="flex flex-col space-y-4 text-sm">
-            {/* <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink> */}
             {Vets.map((vet) => {
-              return <HoveredLink href="/vets">{vet.name}</HoveredLink>;
+              return (
+                <HoveredLink href="/vets" key={vet.id}>
+                  {vet.name}
+                </HoveredLink>
+              );
             })}
           </div>
         </MenuItem>

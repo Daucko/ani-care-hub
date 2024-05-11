@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Map from './Map';
 import DocsList from './DocsList';
+import { Vets } from '../../utils/dummyData';
 
 const apikey = 'WbssaADa3cmwlq4flQ8_tXKtOjWMG81mnfe7o3gjbHM';
 
@@ -41,8 +42,8 @@ const ContactSection = () => {
         <span className="w-[4rem] h-1 bg-[#7077A1] z-50 mx-auto block"></span>
       </div>
       <div className="grid grid-cols-3 gap-8 max-w-[80vw] mx-auto"></div>
-      <div className="flex ">
-        <DocsList list={doctorsList} onClickHandler={onClickHandler_} />
+      <div className="grid grid-cols-1 sm:grid-cols-[15vw_minmax(80vw,_1fr)_100px] mx-[2.5vw]">
+        <DocsList list={Vets} onClickHandler={onClickHandler_} />
         <Map
           apikey={apikey}
           userPosition={userPosition}

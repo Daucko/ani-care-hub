@@ -1,3 +1,5 @@
+// import { HoverCardButton } from '../../ui/HoverCard';
+
 function DocEntry(props) {
   const handleClick = () => {
     props.onClickHandler(props.data.location);
@@ -12,13 +14,19 @@ function DocEntry(props) {
     cursor: 'pointer',
     textAlign: 'center',
     backgroundColor: '#F6B17A',
-    fontSize: '1.2rem',
+    fontSize: '1rem',
+    fontWeight: '600',
     color: '#2D3250',
   };
 
   return (
     <div style={entryStyle} onClick={handleClick}>
       {props.data.name}
+      {/* <HoverCardButton
+        name={props.data.name}
+        address={props.data.address}
+        image={props.data.image}
+      /> */}
     </div>
   );
 }
@@ -35,7 +43,7 @@ function DocsList(props) {
     );
   });
   return (
-    <div id="restaurant-list" className="grid bg-[#7077A1]">
+    <div id="restaurant-list" className="grid bg-[#7077A1] overflow-y-scroll">
       {list}
     </div>
   );

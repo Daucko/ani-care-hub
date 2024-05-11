@@ -94,91 +94,92 @@ export const Animals = [
 export const Vets = [
   {
     id: 1,
-    name: 'Olatunbosun Iyinoluwa',
+    name: 'Dr. Olatunbosun Iyinoluwa',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet1.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1508, lng: -21.9536 },
   },
   {
     id: 2,
-
-    name: 'Awofisibe Ibitayo',
+    name: 'Dr. Awofisibe Ibitayo',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet2.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1502, lng: -21.9519 },
   },
   {
     id: 3,
-
-    name: 'Akinnibosun Oluwafemi',
+    name: 'Dr. Akinnibosun Oluwafemi',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet3.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1475, lng: -21.9347 },
   },
   {
     id: 4,
-
-    name: 'Adekambi Tolulope',
+    name: 'Dr. Adekambi Tolulope',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet4.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
   {
     id: 5,
-
-    name: 'Odamo Eniola',
+    name: 'Dr. Odamo Eniola',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
   {
     id: 6,
-
-    name: 'Odunlami Ahmidat',
+    name: 'Dr. Odunlami Ahmidat',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
   {
     id: 7,
-
-    name: 'Soaga Yesir',
+    name: 'Dr. Soaga Yesir',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
   {
     id: 8,
-
-    name: 'Aremu Fawziyyat',
+    name: 'Dr. Aremu Fawziyyat',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
   {
     id: 9,
-
-    name: 'Alabede Istijabat',
+    name: 'Dr. Alabede Istijabat',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
   {
     id: 10,
-
-    name: 'Onoja Collins',
+    name: 'Dr. Onoja Collins',
     address: '4 abc street, Iroko Town, Sango Ota, ogun State',
     bio: "Dr. Maria Lopez, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being. With a Doctor of Veterinary Medicine degree from a prestigious institution, she brings expertise in preventive care, surgery, and emergency medicine. Dr. Lopez prioritizes building strong relationships with her clients and their pets, providing personalized care tailored to each animal's unique needs. Committed to community outreach, she volunteers her time to provide veterinary services to underserved communities and educates pet owners on responsible pet ownership. With a compassionate approach and a commitment to excellence, Dr. Lopez is dedicated to making a positive impact in the lives of animals and their families.",
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
+    location: { lat: 64.1494, lng: -21.9337 },
   },
 ];
