@@ -10,29 +10,29 @@ const DogBoarding = () => {
           <img
             src="/images/dog-boarding1.jpg"
             alt="boarding-pic1"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className="rounded-[50px] object-cover border-[5px] border-[#2D3250]"
           />
           <img
             src="/images/dog-boarding2.jpg"
             alt="boarding-pic1"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className="rounded-[50px] object-cover border-[5px] border-[#2D3250]"
           />
           <img
             src="/images/dog-boarding3.jpg"
             alt="boarding-pic1"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className="rounded-[50px] object-cover border-[5px] border-[#2D3250]"
           />
           <img
             src="/images/dog-boarding4.jpg"
             alt="boarding-pic1"
-            width={400}
-            height={400}
+            width={300}
+            height={300}
             className="rounded-[50px] object-cover border-[5px] border-[#2D3250]"
           />
         </article>

@@ -7,6 +7,7 @@ import { BiLeftArrowAlt } from 'react-icons/bi';
 
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Textarea } from '../../components/SignUp/Textarea';
 
 export function DocSignupForm() {
   const navigate = useNavigate();
@@ -19,11 +20,13 @@ export function DocSignupForm() {
   return (
     <div className="max-w-xl w-full mx-auto mt-20 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-[#2D3250] dark:text-neutral-200">
-        Welcome to Aceternity
+        Welcome to AniCare Hub
       </h2>
-      <p className="text-[#2D3250] text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+      <p className="text-[#2D3250] text-sm  mt-2 dark:text-neutral-300">
+        Welcome onboard our esteem Doctor, please sign up to anicarehub. <br />
+        Note that the longitude and latitude input fields are the ones for your{' '}
+        {''}
+        <strong>office address</strong>.
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
@@ -32,23 +35,29 @@ export function DocSignupForm() {
             <Label htmlFor="firstname" className="text-[#2D3250]">
               First name
             </Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" placeholder="Abiodun" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname" className="text-[#2D3250]">
               Last name
             </Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" placeholder="Olajide" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email" className="text-[#2D3250]">
             Email Address
           </Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            placeholder="daucko@RealMadridfc.com"
+            type="email"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="text-[#2D3250]">
+            Password
+          </Label>
           <Input id="password" placeholder="••••••••" type="password" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
@@ -56,6 +65,27 @@ export function DocSignupForm() {
             VCN Number
           </Label>
           <Input id="vcn-number" placeholder="••••••••" type="number" />
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-8">
+          <Label htmlFor="address" className="text-[#2D3250]">
+            Office Address
+          </Label>
+          <Textarea
+            id="address"
+            placeholder="6 Wale Ojerinde Street, Iroko Town, Ajegunle Bus-Stop, Sango Ota, Ogun State"
+          ></Textarea>
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-8">
+          <Label htmlFor="vcn-number" className="text-[#2D3250]">
+            Latitude
+          </Label>
+          <Input id="vcn-number" placeholder=" 64.1502" type="number" />
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-8">
+          <Label htmlFor="vcn-number" className="text-[#2D3250]">
+            Longitude
+          </Label>
+          <Input id="vcn-number" placeholder="-21.9519" type="number" />
         </LabelInputContainer>
 
         <button

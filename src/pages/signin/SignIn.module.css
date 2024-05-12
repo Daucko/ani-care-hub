@@ -56,7 +56,7 @@
 
 .myForm {
   display: flex;
-  width: 60vw;
+  width: 70vw;
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,7 @@
   position: relative;
   gap: 1rem;
   background: #ffffff;
-  width: 70%;
+  width: 80%;
   /* max-width: 32rem; */
   padding: 3rem 2rem;
   border-radius: 2rem;

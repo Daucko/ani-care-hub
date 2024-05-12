@@ -1,3 +1,4 @@
+import HoverCardUi from '../../ui/HoverCard';
 import classes from './Welcome.module.css';
 
 const Welcome = () => {

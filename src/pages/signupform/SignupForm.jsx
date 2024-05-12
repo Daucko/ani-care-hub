@@ -4,7 +4,7 @@ import { Input } from '../../components/SignUp/Input';
 import { cn } from '../../utils/cn';
 import { IconBrandFacebook, IconBrandGoogle } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
-import { BiLeftArrowAlt } from 'react-icons/bi';
+import { Textarea } from '../../components/SignUp/Textarea';
 
 export function SignupForm() {
   const handleSubmit = (e) => {
@@ -27,13 +27,13 @@ export function SignupForm() {
             <Label htmlFor="firstname" className="text-[#2D3250]">
               First name
             </Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" placeholder="Abiodun" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname" className="text-[#2D3250]">
               Last name
             </Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" placeholder="Olajide" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
@@ -43,20 +43,23 @@ export function SignupForm() {
           <Input id="school-name" placeholder="my school name" type="text" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="school-address" className="text-[#2D3250]">
-            Address of School
+          <Label htmlFor="address" className="text-[#2D3250]">
+            School Address
           </Label>
-          <Input
-            id="school-address"
-            placeholder="projectmayhem@fc.com"
-            type="text"
-          />
+          <Textarea
+            id="address"
+            placeholder="6 Wale Ojerinde Street, Iroko Town, Ajegunle Bus-Stop, Sango Ota, Ogun State"
+          ></Textarea>
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email" className="text-[#2D3250]">
             Email Address
           </Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input
+            id="email"
+            placeholder="specialthanks@toGod.com"
+            type="email"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password" className="text-[#2D3250]">

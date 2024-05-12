@@ -76,9 +76,9 @@ const SignIn = () => {
 
             <div onClick={handlePassword}>
               {showPassword ? (
-                <FiEye className={classes.inputIcon} />
-              ) : (
                 <FiEyeOff className={classes.inputIcon} />
+              ) : (
+                <FiEye className={classes.inputIcon} />
               )}
             </div>
           </div>

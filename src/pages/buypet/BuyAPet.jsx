@@ -8,12 +8,12 @@ export function BuyAPet() {
   const { pet } = useParams();
 
   return (
-    <div className="grid sm:grid-cols-3 justify-center place-content-center gap-36 w-[80vw] mx-auto py-20">
+    <div className="grid sm:grid-cols-3 justify-center place-content-center gap-16 w-[80vw] mx-auto py-20">
       {Animals.map((animal) => {
         if (animal.animalType === pet) {
           return (
             <BackgroundGradient
-              className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"
+              className="rounded-[22px] max-w-sm min-h-full p-4 sm:p-6 bg-white dark:bg-zinc-900"
               key={animal.id}
             >
               <img
@@ -27,7 +27,7 @@ export function BuyAPet() {
                 {animal.title}
               </p>
 
-              <p className="text-base text-[#424769] dark:text-neutral-400">
+              <p className="text-sm text-[#424769] dark:text-neutral-400">
                 {animal.description}
               </p>
               <Link

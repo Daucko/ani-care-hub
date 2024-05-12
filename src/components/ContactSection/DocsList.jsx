@@ -1,4 +1,4 @@
-// import { HoverCardButton } from '../../ui/HoverCard';
+import HoverCardUi from '../../ui/HoverCard';
 
 function DocEntry(props) {
   const handleClick = () => {
@@ -21,12 +21,13 @@ function DocEntry(props) {
 
   return (
     <div style={entryStyle} onClick={handleClick}>
-      {props.data.name}
-      {/* <HoverCardButton
+      {/* {props.data.name} */}
+      <HoverCardUi
         name={props.data.name}
-        address={props.data.address}
         image={props.data.image}
-      /> */}
+        address={props.data.address}
+        className="z-50"
+      />
     </div>
   );
 }
@@ -43,7 +44,7 @@ function DocsList(props) {
     );
   });
   return (
-    <div id="restaurant-list" className="grid bg-[#7077A1] overflow-y-scroll">
+    <div id="restaurant-list" className="grid overflow-y-scroll">
       {list}
     </div>
   );
