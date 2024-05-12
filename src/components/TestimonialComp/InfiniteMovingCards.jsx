@@ -68,14 +68,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
+          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap h-full',
           start && 'animate-scroll ',
           pauseOnHover && 'hover:[animation-play-state:paused]'
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="w-[200px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-4 md:w-[350px]"
             style={{
               background:
                 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
@@ -96,7 +96,7 @@ export const InfiniteMovingCards = ({
               >
                 <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
               </svg>
-              <span className=" relative z-20 text-[20px] leading-[1.6] text-gray-100 font-normal">
+              <span className=" relative z-20 text-[15px] leading-[1.6] text-gray-100 font-normal">
                 {item.quote}
               </span>
               <div className="flex items-center gap-5 mt-10">

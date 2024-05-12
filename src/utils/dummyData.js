@@ -95,7 +95,7 @@ export const Vets = [
   {
     id: 1,
     name: 'Dr. Olatunbosun Iyinoluwa',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Olatunbosun, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet1.jpg',
     vcn: 'A1984746',
@@ -104,7 +104,7 @@ export const Vets = [
   {
     id: 2,
     name: 'Dr. Awofisibe Ibitayo',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Awofisibe, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet2.jpg',
     vcn: 'A1984746',
@@ -113,7 +113,7 @@ export const Vets = [
   {
     id: 3,
     name: 'Dr. Akinnibosun Oluwafemi',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Akinnibosun, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet3.jpg',
     vcn: 'A1984746',
@@ -122,7 +122,7 @@ export const Vets = [
   {
     id: 4,
     name: 'Dr. Adekambi Tolulope',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Adekanbi, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet4.jpg',
     vcn: 'A1984746',
@@ -131,7 +131,7 @@ export const Vets = [
   {
     id: 5,
     name: 'Dr. Odamo Eniola',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Odamo, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
@@ -140,7 +140,7 @@ export const Vets = [
   {
     id: 6,
     name: 'Dr. Odunlami Ahmidat',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Odunlami, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
@@ -149,7 +149,7 @@ export const Vets = [
   {
     id: 7,
     name: 'Dr. Soaga Yesir',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Soaga, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
@@ -158,7 +158,7 @@ export const Vets = [
   {
     id: 8,
     name: 'Dr. Aremu Fawziyyat',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Aremu, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
@@ -167,7 +167,7 @@ export const Vets = [
   {
     id: 9,
     name: 'Dr. Alabede Istijabat',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Alabede, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
     vcn: 'A1984746',
@@ -176,7 +176,7 @@ export const Vets = [
   {
     id: 10,
     name: 'Dr. Onoja Collins',
-    address: '4 abc street, Iroko Town, Sango Ota, ogun State',
+    address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Onoja, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
     vcn: 'A1984746',

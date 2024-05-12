@@ -3,9 +3,6 @@ import React from 'react';
 import PicsSlideShow from './PicsSlideShow';
 import { BentoGrid, BentoGridItem } from './BentoGrid';
 import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
   IconClipboardCopy,
   IconFileBroken,
   IconSignature,
@@ -29,12 +26,12 @@ export function BentoGridDemo() {
   );
 }
 const AllPics = () => (
-  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 ">
+  <div className="flex flex-1 w-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 ">
     <PicsSlideShow />
   </div>
 );
 const VetPic = () => (
-  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
       src="/images/image5.jpeg"
       alt=""
@@ -43,7 +40,7 @@ const VetPic = () => (
   </div>
 );
 const BoardingPic = () => (
-  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
       src="/images/image14.jpg"
       alt=""
@@ -52,7 +49,7 @@ const BoardingPic = () => (
   </div>
 );
 const School = () => (
-  <div className="flex flex-1 w-full h-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full min-h-[12rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <img
       src="/images/image9.jpg"
       alt=""
@@ -63,45 +60,26 @@ const School = () => (
 const items = [
   {
     title: 'Why Use AniCare Hub?',
-    description: 'Explore the birth of groundbreaking ideas.',
+    description: 'Paws & Purpose: Where Every Tail Wag Counts!',
     header: <AllPics />,
     icon: <IconClipboardCopy className="h-5 w-5 text-neutral-500" />,
   },
   {
     title: 'The Dog Schools',
-    description: 'Dive into the transformative power of technology.',
+    description: 'Pawsitive Progress: Where Every Dog Finds Their Wag!.',
     header: <School />,
     icon: <IconFileBroken className="h-5 w-5 text-neutral-500" />,
   },
   {
     title: 'The Art of Care',
-    description: 'Discover the beauty of thoughtful and functional design.',
+    description: 'Cozy Retreats: Where Tails Wag and Hearts Soar.',
     header: <BoardingPic />,
     icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
   },
   {
     title: 'Animal Health Concerns',
-    description:
-      'Understand the impact of effective communication in our lives.',
+    description: 'Compassionate Care: Where Healing Meets Heart.',
     header: <VetPic />,
     icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
   },
-  //   {
-  //     title: 'The Pursuit of Knowledge',
-  //     description: 'Join the quest for understanding and enlightenment.',
-  //     header: <Skeleton />,
-  //     icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  //   },
-  //   {
-  //     title: 'The Joy of Creation',
-  //     description: 'Experience the thrill of bringing ideas to life.',
-  //     header: <Skeleton />,
-  //     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  //   },
-  //   {
-  //     title: 'The Spirit of Adventure',
-  //     description: 'Embark on exciting journeys and thrilling discoveries.',
-  //     header: <Skeleton />,
-  //     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  //   },
 ];

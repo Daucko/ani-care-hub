@@ -61,14 +61,20 @@ export function HomeNav({ onSearchClick }) {
             className="cursor-pointer ml-[47%] block"
             onClick={onSearchClick}
           >
-            <IoSearch className="w-10 h-10 cursor-pointer" />
+            <IoSearch className="w-6 h-6 cursor-pointer" />
           </div>
-          <button className="bg-[#F6B17A] text-[#2D3250] text-[20px] font-semibold leading-6 rounded-full p-3 dark:text-white ml-[30%]">
+          <Link
+            to="/register-service"
+            className="block my-4 bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 w-max dark:text-white mx-auto"
+          >
             Register a Service
-          </button>
-          <span className="text-xl text-[#2D3250] font-semibold cursor-pointer block ml-[42%]">
-            Sign in <FaArrowRight className="w-5 h-5 inline-block" />
-          </span>
+          </Link>
+          <Link
+            to="/sign-in"
+            className="text-md text-[#2D3250] font-semibold cursor-pointer block ml-[42%]"
+          >
+            Sign in <FaArrowRight className="w-3 h-3 inline-block" />
+          </Link>
           <div
             className="absolute text-2xl -top-4 right-2 block sm:hidden "
             onClick={toggleSmallScreenMenu}
@@ -99,7 +105,7 @@ function Navbar({ className, pet }) {
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Service">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+          <div className="  text-sm grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 p-4">
             <ProductItem
               title="Veterinarian"
               href="/vets"

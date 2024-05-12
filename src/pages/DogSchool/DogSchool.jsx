@@ -6,7 +6,7 @@ import { dogSchools } from '../../utils/dummyData';
 export function DogSchool() {
   return (
     <main className="bg-[#7077A1] ">
-      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full pb-20 pt-40 ">
+      <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto w-full pb-20 pt-40 ">
         <h1 className="absolute top-[4%]  left-20 sm:left-[30%] font-bold text-[20px] sm:text-[45px] text-[#2D3250]">
           Fetch success for your pup!
         </h1>
