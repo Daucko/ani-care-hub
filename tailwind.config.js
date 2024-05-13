@@ -27,10 +27,7 @@ module.exports = {
       // colors: {
       //   ...mauve,
       // },
-      animation: {
-        scroll:
-          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
-      },
+
       keyframes: {
         scroll: {
           to: {
@@ -55,6 +52,8 @@ module.exports = {
         },
       },
       animation: {
+        scroll:
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         slideUpAndFade: 'slideUpAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)',
         slideDownAndFade:
           'slideDownAndFade 300ms cubic-bezier(0.16, 0, 0.13, 1)',
