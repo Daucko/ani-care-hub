@@ -157,7 +157,7 @@ export const Vets = [
   },
   {
     id: 8,
-    name: 'Dr. Aremu Fawziyyat',
+    name: 'Dr. Odeyeyiwa Oreoluwa',
     address: '4 abc street, Iroko Town, Sango, Ogun State',
     bio: 'Dr. Aremu, DVM, is a dedicated veterinarian with a passion for animal welfare and well-being.',
     image: '/images/vet5.jpg',
