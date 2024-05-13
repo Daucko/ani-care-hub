@@ -8,12 +8,10 @@
   background-image: url('/images/image7.jpeg');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
   background-color: #7077a1;
   display: flex;
   flex-direction: column;
-  /* align-items: end; */
   justify-content: center;
   min-height: 100vh;
-  /* margin-left: 60vw; */
 }
