@@ -1,4 +1,5 @@
 import { cn } from '../../utils/cn';
+import { Link } from 'react-router-dom';
 
 export const BentoGrid = ({ className, children }) => {
   return (
@@ -19,9 +20,11 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  href,
 }) => {
   return (
-    <div
+    <Link
+      to={href}
       className={cn(
         'row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border  justify-between flex flex-col space-y-4 h-[28rem]',
         className
@@ -37,6 +40,6 @@ export const BentoGridItem = ({
           {description}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

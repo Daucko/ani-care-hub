@@ -14,11 +14,12 @@ export function BentoGridDemo() {
     <BentoGrid className="w-full">
       {items.map((item, i) => (
         <BentoGridItem
-          key={i}
+          key={item.id}
           title={item.title}
           description={item.description}
           header={item.header}
           icon={item.icon}
+          href={item.href}
           className={i === 4 ? ' md:col-span-2' : ''}
         />
       ))}
@@ -59,27 +60,35 @@ const School = () => (
 );
 const items = [
   {
+    id: 1,
     title: 'Why Use AniCare Hub?',
     description: 'Paws & Purpose: Where Every Tail Wag Counts!',
     header: <AllPics />,
     icon: <IconClipboardCopy className="h-5 w-5 text-neutral-500" />,
+    href: '/about-us',
   },
   {
+    id: 2,
     title: 'The Dog Schools',
     description: 'Pawsitive Progress: Where Every Dog Finds Their Wag!.',
     header: <School />,
     icon: <IconFileBroken className="h-5 w-5 text-neutral-500" />,
+    href: '/dog-school',
   },
   {
+    id: 3,
     title: 'The Art of Care',
     description: 'Cozy Retreats: Where Tails Wag and Hearts Soar.',
     header: <BoardingPic />,
     icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+    href: '/dog-boarding',
   },
   {
+    id: 4,
     title: 'Animal Health Concerns',
     description: 'Compassionate Care: Where Healing Meets Heart.',
     header: <VetPic />,
     icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
+    href: '/vets',
   },
 ];
