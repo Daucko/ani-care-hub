@@ -19,14 +19,12 @@ export function HomeNav({ onSearchClick }) {
   return (
     <div>
       <div className="relative w-full flex items-center justify-between px-5 sm:px-20">
-        <Link
-          to="/"
-          className="cursor-pointer flex items-center justify-center space-x-2"
-        >
-          <img src="/favicon.ico" alt="" />
-          <h1 className="text-xl font-semibold text-[#2D3250] hidden sm:block">
-            AniCareHub
-          </h1>
+        <Link to="/" className="">
+          <img
+            src="/favicon.ico"
+            alt=""
+            className="w-10 sm:w-24 h-10 sm:h-24 object-cover"
+          />
         </Link>
         <div className="w-1/2 hidden sm:flex items-center justify-between">
           <Navbar className="" />

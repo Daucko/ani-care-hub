@@ -13,7 +13,7 @@ const SiteNav = () => {
 
   return (
     <main>
-      <nav className="py-5 border-solid border-b-2 sticky top-0 bg-white/80 z-50">
+      <nav className="py-3 border-solid border-b-2 sticky top-0 bg-white/80 z-50">
         <HomeNav onSearchClick={onSearchClick} pet={pet} />
       </nav>
       <Outlet />
