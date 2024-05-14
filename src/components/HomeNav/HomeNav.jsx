@@ -23,7 +23,7 @@ export function HomeNav({ onSearchClick }) {
           <img
             src="/favicon.ico"
             alt=""
-            className="w-10 sm:w-24 h-10 sm:h-24 object-cover"
+            className="w-12 sm:w-32 h-10 sm:h-24 object-cover"
           />
         </Link>
         <div className="w-1/2 hidden sm:flex items-center justify-between">
