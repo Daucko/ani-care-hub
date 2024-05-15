@@ -44,7 +44,10 @@ function DocsList(props) {
     );
   });
   return (
-    <div id="restaurant-list" className="grid overflow-auto max-h-screen ">
+    <div
+      id="restaurant-list"
+      className="grid overflow-auto scroll-smooth max-h-screen "
+    >
       {list}
     </div>
   );

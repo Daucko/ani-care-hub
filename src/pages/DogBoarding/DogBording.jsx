@@ -37,7 +37,7 @@ const DogBoarding = () => {
               className="w-[100%] h-[100%] rounded-full object-cover"
             />
           </div>
-          <h1 className="text-[20px] font-semibold ">Dauda Tijani</h1>
+          <h1 className="text-[20px] font-semibold ">Dauda Tijani</h1>.
           <div className="flex gap-5 items-center">
             <GrLocation className="font-semibold text-[15px] sm:text-[20px]" />
             <p className="text-[16px] sm:text-[20px] font-semibold sm:font-normal">
