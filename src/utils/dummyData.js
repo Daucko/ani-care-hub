@@ -222,6 +222,15 @@ export const dogSchools = [
       'Fetch success for your pup! Choose our dog school for tail-waggling transformations.',
     image: '/images/dog-school.jpg',
   },
+  {
+    id: 4,
+    name: 'SMC Dog School',
+    advertText:
+      'Unleash the potential! Register your furry friend for dog school today.',
+    motto:
+      'Fetch success for your pup! Choose our dog school for tail-waggling transformations.',
+    image: '/images/dog-school.jpg',
+  },
 ];
 
 export const sponsoredVets = Vets.filter((vet) => vet.sponsored == true);

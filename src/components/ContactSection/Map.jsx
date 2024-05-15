@@ -120,7 +120,7 @@ const Map = (props) => {
   }
 
   // Return a div element to hold the map
-  return <div className="h-[700px] w-[100%] " ref={mapRef} />;
+  return <div className="h-[screen] w-[100%]" ref={mapRef} />;
 };
 
 export default Map;

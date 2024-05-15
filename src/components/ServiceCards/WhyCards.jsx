@@ -2,12 +2,16 @@
 import React from 'react';
 import PicsSlideShow from './PicsSlideShow';
 import { BentoGrid, BentoGridItem } from './BentoGrid';
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from '@tabler/icons-react';
+// import {
+//   IconClipboardCopy,
+//   IconFileBroken,
+//   IconSignature,
+//   IconTableColumn,
+// } from '@tabler/icons-react';
+import { BsQuestionOctagon } from 'react-icons/bs';
+import { GiJumpingDog } from 'react-icons/gi';
+import { MdOutlineHealthAndSafety } from 'react-icons/md';
+import { BsHouses } from 'react-icons/bs';
 
 export function BentoGridDemo() {
   return (
@@ -64,7 +68,7 @@ const items = [
     title: 'Why Use AniCare Hub?',
     description: 'Paws & Purpose: Where Every Tail Wag Counts!',
     header: <AllPics />,
-    icon: <IconClipboardCopy className="h-5 w-5 text-neutral-500" />,
+    icon: <BsQuestionOctagon className="h-5 w-5 text-[#2D3250]" />,
     href: '/about-us',
   },
   {
@@ -72,15 +76,16 @@ const items = [
     title: 'The Dog Schools',
     description: 'Pawsitive Progress: Where Every Dog Finds Their Wag!.',
     header: <School />,
-    icon: <IconFileBroken className="h-5 w-5 text-neutral-500" />,
+    icon: <GiJumpingDog className="h-5 w-5 text-[#2D3250]" />,
+
     href: '/dog-school',
   },
   {
     id: 3,
     title: 'The Art of Care',
-    description: 'Cozy Retreats: Where Tails Wag and Hearts Soar.',
+    description: 'Bark & Board: Where Every Tail Wags! And are secured.',
     header: <BoardingPic />,
-    icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+    icon: <BsHouses className="h-5 w-5 text-[#2D3250]" />,
     href: '/dog-boarding',
   },
   {
@@ -88,7 +93,7 @@ const items = [
     title: 'Animal Health Concerns',
     description: 'Compassionate Care: Where Healing Meets Heart.',
     header: <VetPic />,
-    icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
+    icon: <MdOutlineHealthAndSafety className="h-5 w-5 text-[#2D3250]" />,
     href: '/vets',
   },
 ];
