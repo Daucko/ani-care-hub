@@ -12,9 +12,18 @@ export function DoctorCard() {
       {sponsoredVets.map((vet) => {
         return (
           <FollowerPointerCard
-            title={<TitleComponent title={vet.name} avatar={vet.image} />}
+            title={
+              <TitleComponent
+                title={vet.name}
+                avatar={vet.image}
+                key={vet.id}
+              />
+            }
           >
-            <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100 w-80">
+            <div
+              className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100 w-80"
+              key={vet.id}
+            >
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
                 <img
                   src={vet.image}

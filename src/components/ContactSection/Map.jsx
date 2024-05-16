@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import H from '@here/maps-api-for-javascript';
+import { RiArrowUpDoubleLine } from 'react-icons/ri';
+import { RiArrowDownDoubleLine } from 'react-icons/ri';
 
 const Map = (props) => {
   const mapRef = useRef(null);
@@ -121,7 +123,18 @@ const Map = (props) => {
 
   // Return a div element to hold the map
 
-  return <div className="h-[screen] w-[100%] touch-none" ref={mapRef} />;
+  return (
+    <div className="h-screen w-[100%]" ref={mapRef}>
+      <main className="absolute -right-1 sm:-right-[3%] top-[44%] sm:top-[0%] w-5 h-screen bg-[#2D3250] flex flex-col justify-center items-center gap-40">
+        <a href="#doctorSection">
+          <RiArrowUpDoubleLine className="text-white text-[30px] cursor-pointer" />
+        </a>
+        <a href="#testimonialSection">
+          <RiArrowDownDoubleLine className="text-white text-[30px] cursor-pointer" />
+        </a>
+      </main>
+    </div>
+  );
 };
 
 export default Map;
