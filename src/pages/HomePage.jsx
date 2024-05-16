@@ -11,6 +11,27 @@ const HomePage = () => {
   const [popSearch, setPopSearch] = useState(false);
   const navigate = useNavigate();
 
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLatitude(position.coords.latitude);
+          setLongitude(position.coords.longitude);
+          console.log(`latitude: ${latitude}, longitude; ${longitude}`);
+        },
+        (err) => {
+          setError(err.message);
+        }
+      );
+    } else {
+      setError('Geolocation is not supported by this browser.');
+    }
+  }, []);
+
   if (popSearch) {
     return <SearchModal />;
   }
@@ -27,7 +48,11 @@ const HomePage = () => {
         <DoctorsSection />
       </section>
       <section className="my-20 relative h-full">
-        <ContactSection />
+        {error ? (
+          <ContactSection lat={6.537216} long={3.3521664} />
+        ) : (
+          <ContactSection lat={latitude} long={longitude} />
+        )}
       </section>
       <section id="testimonialSection">
         <Testimonial />

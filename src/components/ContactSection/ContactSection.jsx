@@ -5,35 +5,15 @@ import { Vets } from '../../utils/dummyData';
 
 const apikey = 'WbssaADa3cmwlq4flQ8_tXKtOjWMG81mnfe7o3gjbHM';
 
-const ContactSection = () => {
+const ContactSection = ({ lat, long }) => {
   const [doctorPosition, setDoctorPosition] = useState(null);
 
   const onClickHandler_ = (location) => {
     setDoctorPosition(location);
+    console.log(`lat: ${lat}, long: ${long}`);
   };
 
-  // Austurvöllur square in Reykjavik
-  const userPosition = { lat: 64.1472, lng: -21.9398 };
-
-  // const doctorsList = [
-  //   {
-  //     name: 'The Fish Market',
-  //     // location: { lat: 64.1508, lng: -21.9536 },
-  //     location: { lat: 6.71162, lng: 3.27605 },
-  //   },
-  //   {
-  //     name: 'Bæjarins Beztu Pylsur',
-  //     location: { lat: 64.1502, lng: -21.9519 },
-  //   },
-  //   {
-  //     name: 'Grillmarkadurinn',
-  //     location: { lat: 64.1475, lng: -21.9347 },
-  //   },
-  //   {
-  //     name: 'Kol Restaurant',
-  //     location: { lat: 64.1494, lng: -21.9337 },
-  //   },
-  // ];
+  const userPosition = { lat: lat || 6.537216, lng: long || 3.3521664 };
 
   return (
     <main className="h-full">
@@ -41,7 +21,7 @@ const ContactSection = () => {
       <div className="w-[10rem] rounded-full h-1 bg-black/20 mx-auto mb-20 mt-2 -z-10">
         <span className="w-[4rem] h-1 bg-[#7077A1] z-50 mx-auto block"></span>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-[15vw_minmax(80vw,_1fr)_100px] mx-5 sm:mx-[20px] border-2 border-red-600">
+      <div className="grid grid-cols-1 sm:grid-cols-[15vw_minmax(80vw,_1fr)_100px] mx-5 sm:mx-[20px]">
         <DocsList list={Vets} onClickHandler={onClickHandler_} />
         <Map
           apikey={apikey}
