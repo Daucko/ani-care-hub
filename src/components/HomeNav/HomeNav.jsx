@@ -18,32 +18,38 @@ export function HomeNav({ onSearchClick }) {
 
   return (
     <div>
-      <div className="relative w-full flex items-center justify-between px-5 sm:px-20">
+      <div className="relative w-full flex items-center justify-between px-4 sm:px-20">
         <Link to="/" className="">
           <img
             src="/favicon.ico"
             alt=""
-            className="w-12 sm:w-32 h-10 sm:h-24 object-cover"
+            className="w-12 sm:w-[120px] h-9 sm:h-24 object-cover"
           />
         </Link>
-        <div className="w-1/2 hidden sm:flex items-center justify-between">
+        <div className="w-1/2 hidden sm:flex items-center justify-center gap-2">
           <Navbar className="" />
           <div className="cursor-pointer" onClick={onSearchClick}>
             <IoSearch className="w-5 h-5 cursor-pointer" />
           </div>
           <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
-          <Link
-            to="/register-service"
-            className="bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 dark:text-white"
-          >
-            Register a Service
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link to="/about-us" className="text-[#2D3250] font-semibold">
+              About Us
+            </Link>
+            <Link
+              to="/register-service"
+              className="bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 dark:text-white"
+            >
+              Register a Service
+            </Link>
+          </div>
           <Link
             to="/sign-in"
             className="text-[15px] text-[#2D3250] font-semibold cursor-pointer"
           >
             Sign in <FaArrowRight className="w-3 h-3 inline-block" />
           </Link>
+          <Link></Link>
         </div>
         <div
           className="absolute block sm:hidden top-0 right-5 "
@@ -91,7 +97,7 @@ function Navbar({ className, pet }) {
   return (
     <div className={cn('z-50', className)}>
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Doctors">
+        {/* <MenuItem setActive={setActive} active={active} item="Doctors">
           <div className="flex flex-col space-y-4 text-sm">
             {Vets.map((vet) => {
               return (
@@ -101,7 +107,7 @@ function Navbar({ className, pet }) {
               );
             })}
           </div>
-        </MenuItem>
+        </MenuItem> */}
         <MenuItem setActive={setActive} active={active} item="Service">
           <div className="  text-sm grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 p-4">
             <ProductItem

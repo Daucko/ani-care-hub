@@ -20,9 +20,9 @@ const SignIn = () => {
   return (
     <main className="w-full bg-[#7077A1]">
       <form className={classes.myForm}>
-        <Link href="#" title="Logo">
+        <div href="#">
           <img src="/images/login.svg" alt="Logo" className={classes.logo} />
-        </Link>
+        </div>
         <div className={classes.myFormRight}>
           <div className={classes.loginWelcomeRow}>
             <h1>Welcome back &#x1F44F;</h1>
