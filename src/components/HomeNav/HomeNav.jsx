@@ -26,6 +26,10 @@ export function HomeNav({ onSearchClick }) {
             className="w-12 sm:w-[120px] h-9 sm:h-24 object-cover"
           />
         </Link>
+        <Navbar className="block sm:hidden" />
+        <div className=" block sm:hidden  " onClick={toggleSmallScreenMenu}>
+          <RiMenuFill className="h-10 w-10" />
+        </div>
         <div className="w-1/2 hidden sm:flex items-center justify-center gap-2">
           <Navbar className="" />
           <div className="cursor-pointer" onClick={onSearchClick}>
@@ -51,31 +55,21 @@ export function HomeNav({ onSearchClick }) {
           </Link>
           <Link></Link>
         </div>
-        <div
-          className="absolute block sm:hidden top-0 right-5 "
-          onClick={toggleSmallScreenMenu}
-        >
-          <RiMenuFill className="h-10 w-10" />
-        </div>
       </div>
       {showMenu && (
-        <div className="relative bg-white  -top-16 left-0 w-[100vw] h-[100vh] flex-col sm:hidden justify-center space-y-8">
-          <Navbar className="" />
-          <div
-            className="cursor-pointer ml-[47%] block"
-            onClick={onSearchClick}
-          >
+        <div className="relative bg-white  top-6 left-0 w-full h-full flex-col sm:hidden justify-center space-y-4">
+          <div className="cursor-pointer ml-2 block" onClick={onSearchClick}>
             <IoSearch className="w-6 h-6 cursor-pointer" />
           </div>
           <Link
             to="/register-service"
-            className="block my-4 bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 w-max dark:text-white mx-auto"
+            className="block my-4 ml-2 bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 w-max dark:text-white"
           >
             Register a Service
           </Link>
           <Link
             to="/sign-in"
-            className="text-md text-[#2D3250] font-semibold cursor-pointer block ml-[42%]"
+            className="text-md text-[#2D3250] font-semibold cursor-pointer block ml-2"
           >
             Sign in <FaArrowRight className="w-3 h-3 inline-block" />
           </Link>
