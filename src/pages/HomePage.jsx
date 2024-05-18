@@ -1,6 +1,6 @@
 import { Form, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import SearchModal from './SearchComp/SearchModal';
+// import SearchModal from './SearchComp/SearchInput';
 import Welcome from '../components/WelcomeSection/Welcome';
 import { BentoGridDemo } from '../components/ServiceCards/WhyCards';
 import DoctorsSection from '../components/DocSection/DoctorsSection';

@@ -4,7 +4,7 @@ import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import SearchModal from './pages/SearchComp/SearchModal';
+// import SearchModal from './pages/SearchComp/SearchInput';
 import RegisterService from './pages/Register/RegisterService';
 import RegLayout from './pages/Register/RegLayout';
 import { DocSignupForm } from './pages/signupform/DocSignupForm';
@@ -17,14 +17,13 @@ import DogBoarding from './pages/DogBoarding/DogBording';
 import { VetPage } from './pages/Vetpage/VetPage';
 import AboutUs from './pages/AboutUs';
 
-
 const router = createBrowserRouter([
   {
     path: '/',
     element: <SiteNav />,
     children: [
       { path: '/', element: <HomePage /> },
-      { path: '/search', element: <SearchModal /> },
+      // { path: '/search', element: <SearchModal /> },
       {
         path: '/register-service',
         element: <RegLayout />,

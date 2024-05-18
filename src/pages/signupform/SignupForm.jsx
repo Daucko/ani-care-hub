@@ -68,6 +68,15 @@ export function SignupForm() {
           <Input id="password" placeholder="••••••••" type="password" />
         </LabelInputContainer>
 
+        {/* Image Picker Section  */}
+
+        <div>
+          <label class="has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200 ..">
+            Boarding Facility
+            <input type="radio" class="checked:border-indigo-500 ..." />
+          </label>
+        </div>
+
         <button
           className="bg-gradient-to-br relative group/btn from-[#FFBF9B] dark:from-zinc-900 dark:to-zinc-900 to-[#F6B17A] block dark:bg-zinc-800 w-full text-[#2D3250] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"

@@ -7,6 +7,9 @@ import { RiMenuFill } from 'react-icons/ri';
 import { TbX } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { Vets } from '../../utils/dummyData';
+import SearchComp from '../../pages/SearchComp/SearchComp';
+import { HiMiniXMark } from 'react-icons/hi2';
+import { FiSearch } from 'react-icons/fi';
 
 export function HomeNav({ onSearchClick }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -32,9 +35,10 @@ export function HomeNav({ onSearchClick }) {
         </div>
         <div className="w-1/2 hidden sm:flex items-center justify-center gap-2">
           <Navbar className="" />
-          <div className="cursor-pointer" onClick={onSearchClick}>
+          {/* <div className="cursor-pointer" onClick={onSearchClick}>
             <IoSearch className="w-5 h-5 cursor-pointer" />
-          </div>
+          </div> */}
+          <SearchComp />
           <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
           <div className="flex items-center gap-2">
             <Link to="/about-us" className="text-[#2D3250] font-semibold">
@@ -57,26 +61,34 @@ export function HomeNav({ onSearchClick }) {
         </div>
       </div>
       {showMenu && (
-        <div className="relative bg-white  top-6 left-0 w-full h-full flex-col sm:hidden justify-center space-y-4">
-          <div className="cursor-pointer ml-2 block" onClick={onSearchClick}>
-            <IoSearch className="w-6 h-6 cursor-pointer" />
+        <div className="relative bg-white  top-6 left-0 w-full h-full flex-col sm:hidden justify-center items-center space-y-4 p-5">
+          <div className="relative flex w-full flex-wrap items-stretch mb-3">
+            <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 pt-2">
+              <FiSearch className="text-gray-500" />
+            </span>
+            <input
+              type="text"
+              placeholder="Placeholder"
+              className="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-10"
+            />
           </div>
           <Link
             to="/register-service"
-            className="block my-4 ml-2 bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 w-max dark:text-white"
+            className="block my-4 ml-0 bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 w-max dark:text-white"
           >
             Register a Service
           </Link>
           <Link
             to="/sign-in"
-            className="text-md text-[#2D3250] font-semibold cursor-pointer block ml-2"
+            className="text-md text-[#2D3250] font-semibold cursor-pointer block ml-0"
           >
             Sign in <FaArrowRight className="w-3 h-3 inline-block" />
           </Link>
           <div
-            className="absolute text-2xl -top-4 right-2 block sm:hidden "
+            className="absolute text-2xl -top-7 right-2 block sm:hidden "
             onClick={toggleSmallScreenMenu}
           >
+            {/* <input type="search" name=""  /> */}
             <TbX className="" />
           </div>
         </div>

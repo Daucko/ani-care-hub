@@ -8,6 +8,7 @@ import { BiLeftArrowAlt } from 'react-icons/bi';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Textarea } from '../../components/SignUp/Textarea';
+import ImagePicker from '../../ui/ImagePicker';
 
 export function DocSignupForm() {
   const navigate = useNavigate();
@@ -87,6 +88,7 @@ export function DocSignupForm() {
           </Label>
           <Input id="vcn-number" placeholder="-21.9519" type="number" />
         </LabelInputContainer>
+        <ImagePicker />
 
         <button
           className="bg-gradient-to-br relative group/btn from-[#FFBF9B] dark:from-zinc-900 dark:to-zinc-900 to-[#F6B17A] block dark:bg-zinc-800 w-full text-[#2D3250] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
