@@ -2,12 +2,7 @@
 import React from 'react';
 import PicsSlideShow from './PicsSlideShow';
 import { BentoGrid, BentoGridItem } from './BentoGrid';
-// import {
-//   IconClipboardCopy,
-//   IconFileBroken,
-//   IconSignature,
-//   IconTableColumn,
-// } from '@tabler/icons-react';
+
 import { BsQuestionOctagon } from 'react-icons/bs';
 import { GiJumpingDog } from 'react-icons/gi';
 import { MdOutlineHealthAndSafety } from 'react-icons/md';

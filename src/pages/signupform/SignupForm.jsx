@@ -5,6 +5,10 @@ import { cn } from '../../utils/cn';
 import { IconBrandFacebook, IconBrandGoogle } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
 import { Textarea } from '../../components/SignUp/Textarea';
+import { BsHouses } from 'react-icons/bs';
+import ImagePicker from '../../ui/ImagePicker';
+import { GiJumpingDog } from 'react-icons/gi';
+import { FaBusinessTime } from 'react-icons/fa';
 
 export function SignupForm() {
   const handleSubmit = (e) => {
@@ -68,14 +72,86 @@ export function SignupForm() {
           <Input id="password" placeholder="••••••••" type="password" />
         </LabelInputContainer>
 
-        {/* Image Picker Section  */}
+        <fieldset>
+          <legend className="mb-4 font-semibold text-gray-900 dark:text-white">
+            Select Service with the required Number of Pictures
+          </legend>
 
-        <div>
-          <label class="has-[:checked]:bg-indigo-50 has-[:checked]:text-indigo-900 has-[:checked]:ring-indigo-200 ..">
-            Boarding Facility
-            <input type="radio" class="checked:border-indigo-500 ..." />
-          </label>
-        </div>
+          <ul className="w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+              <div className="">
+                <label
+                  htmlFor="boarding-facility"
+                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block pe-5"
+                >
+                  <span className="flex items-center gap-5 block w-full">
+                    <BsHouses className="h-5 w-5 text-[#2D3250]" />
+                    Boarding facility
+                  </span>
+                  <input
+                    id="boarding-facility"
+                    type="radio"
+                    value=""
+                    name="image-picker"
+                    className="peer/boarding-facility w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </label>
+                <div className="hidden peer-has-[:checked]:block">
+                  <ImagePicker />
+                  <ImagePicker />
+                  <ImagePicker />
+                  <ImagePicker />
+                </div>
+              </div>
+            </li>
+            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+              <div className="">
+                <label
+                  htmlFor="dog-school"
+                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block pe-5"
+                >
+                  <span className="flex items-center gap-5 block w-full">
+                    <GiJumpingDog className="h-5 w-5 text-[#2D3250]" />
+                    Dog School
+                  </span>
+                  <input
+                    id="dog-school"
+                    type="radio"
+                    value=""
+                    name="image-picker"
+                    className="peer/boarding-facility w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </label>
+                <div className="hidden peer-has-[:checked]:block">
+                  <ImagePicker />
+                </div>
+              </div>
+            </li>
+            <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+              <div className="">
+                <label
+                  htmlFor="dog-sale"
+                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block pe-5"
+                >
+                  <span className="flex items-center gap-5 block w-full">
+                    <FaBusinessTime className="h-5 w-5 text-[#2D3250]" />
+                    Dog Sale
+                  </span>
+                  <input
+                    id="dog-sale"
+                    type="radio"
+                    value=""
+                    name="image-picker"
+                    className="peer/boarding-facility w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </label>
+                <div className="hidden peer-has-[:checked]:block">
+                  <ImagePicker />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
 
         <button
           className="bg-gradient-to-br relative group/btn from-[#FFBF9B] dark:from-zinc-900 dark:to-zinc-900 to-[#F6B17A] block dark:bg-zinc-800 w-full text-[#2D3250] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
