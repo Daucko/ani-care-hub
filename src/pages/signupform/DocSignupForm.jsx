@@ -5,19 +5,19 @@ import { cn } from '../../utils/cn';
 
 import { BiLeftArrowAlt } from 'react-icons/bi';
 
-import { useNavigate } from 'react-router';
-import { Link } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router';
+import { Form, Link, redirect } from 'react-router-dom';
 import { Textarea } from '../../components/SignUp/Textarea';
 import ImagePicker from '../../ui/ImagePicker';
 
 export function DocSignupForm() {
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted');
-    navigate('..');
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted');
+  //   navigate('..');
+  // };
   return (
     <div className="max-w-xl w-full mx-auto mt-20 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-[#2D3250] dark:text-neutral-200">
@@ -30,7 +30,7 @@ export function DocSignupForm() {
         <strong>office address</strong>.
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <Form className="my-8" method="post">
         <div className=" flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname" className="text-[#2D3250]">
@@ -97,7 +97,7 @@ export function DocSignupForm() {
           Sign up &rarr;
           <BottomGradient />
         </button>
-      </form>
+      </Form>
     </div>
   );
 }
@@ -118,3 +118,17 @@ const LabelInputContainer = ({ children, className }) => {
     </div>
   );
 };
+
+export async function action({ request }) {
+  const url = 'http://localhost:8000/posts';
+  const formData = await request.formData();
+  const postData = Object.fromEntries(formData);
+  const response = await fetch('url', {
+    methods: 'POST',
+    body: JSON.stringify(postData),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  return redirect('/');
+}
