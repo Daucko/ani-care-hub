@@ -84,18 +84,28 @@ export function DocSignupForm() {
           ></Textarea>
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="vcn-number" className="text-[#2D3250]">
+          <Label htmlFor="latitude" className="text-[#2D3250]">
             Latitude
           </Label>
-          <Input id="vcn-number" placeholder=" 64.1502" type="number" />
+          <Input
+            id="latitude"
+            placeholder=" 64.1502"
+            type="number"
+            step="0.0001"
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="vcn-number" className="text-[#2D3250]">
+          <Label htmlFor="longitude" className="text-[#2D3250]">
             Longitude
           </Label>
-          <Input id="vcn-number" placeholder="-21.9519" type="number" />
+          <Input
+            id="longitude"
+            placeholder="-21.9519"
+            type="number"
+            step="0.0001"
+          />
         </LabelInputContainer>
-        <ImagePicker />
+        <ImagePicker label="Your Picture" name="image" />
 
         <button
           className="bg-gradient-to-br relative group/btn from-[#FFBF9B] dark:from-zinc-900 dark:to-zinc-900 to-[#F6B17A] block dark:bg-zinc-800 w-full text-[#2D3250] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
@@ -130,7 +140,7 @@ export async function action({ request }) {
   const url = 'http://localhost:8000/posts';
   const formData = await request.formData();
   const postData = Object.fromEntries(formData);
-  const response = await fetch('url', {
+  const response = await fetch(url, {
     methods: 'POST',
     body: JSON.stringify(postData),
     headers: {

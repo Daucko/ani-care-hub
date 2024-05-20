@@ -30,13 +30,25 @@ export function SignupForm() {
             <Label htmlFor="firstname" className="text-[#2D3250]">
               First name
             </Label>
-            <Input id="firstname" placeholder="Abiodun" type="text" required />
+            <Input
+              id="firstname"
+              placeholder="Abiodun"
+              type="text"
+              name="first-name"
+              required
+            />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname" className="text-[#2D3250]">
               Last name
             </Label>
-            <Input id="lastname" placeholder="Olajide" type="text" required />
+            <Input
+              id="lastname"
+              placeholder="Olajide"
+              type="text"
+              name="last-name"
+              required
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
@@ -47,6 +59,7 @@ export function SignupForm() {
             id="school-name"
             placeholder="my school name"
             type="text"
+            name="school-name"
             required
           />
         </LabelInputContainer>
@@ -58,6 +71,7 @@ export function SignupForm() {
             id="address"
             placeholder="6 Wale Ojerinde Street, Iroko Town, Ajegunle Bus-Stop, Sango Ota, Ogun State"
             required
+            name="address"
           ></Textarea>
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
@@ -68,6 +82,7 @@ export function SignupForm() {
             id="email"
             placeholder="specialthanks@toGod.com"
             type="email"
+            name="email"
             required
           />
         </LabelInputContainer>
@@ -79,6 +94,7 @@ export function SignupForm() {
             id="password"
             placeholder="••••••••"
             type="password"
+            name="password"
             title="Minimum 6 characters at least 1 Alphabet and 1 Number"
             pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
             required
@@ -227,7 +243,7 @@ export async function action({ request }) {
   const url = 'http://localhost:8000/posts';
   const formData = await request.formData();
   const postData = Object.fromEntries(formData);
-  const response = await fetch('url', {
+  const response = await fetch(url, {
     methods: 'POST',
     body: JSON.stringify(postData),
     headers: {
