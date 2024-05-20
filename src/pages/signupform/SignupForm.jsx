@@ -101,7 +101,7 @@ export function SignupForm() {
           />
         </LabelInputContainer>
 
-        <fieldset>
+        <fieldset className="mb-4">
           <legend className="mb-4 font-semibold text-gray-900 dark:text-white">
             Select Service with the required Number of Pictures
           </legend>
