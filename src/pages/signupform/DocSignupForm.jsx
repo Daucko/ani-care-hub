@@ -59,7 +59,14 @@ export function DocSignupForm() {
           <Label htmlFor="password" className="text-[#2D3250]">
             Password
           </Label>
-          <Input id="password" placeholder="••••••••" type="password" />
+          <Input
+            id="password"
+            placeholder="••••••••"
+            type="password"
+            title="Minimum 6 characters at least 1 Alphabet and 1 Number"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+            required
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="vcn-number" className="text-[#2D3250]">

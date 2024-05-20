@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 const HomeFooter = () => {
   return (
     <main className="border-t-1 border-[#2D3250]">
-      <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-between bg-[#7077A1] px-20 py-3">
+      <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-between bg-[#7077A1] px-auto sm:px-20 py-3">
         <p className="text-white text-[12px] sm:text-[15px]">
           &copy; Copyright. All rights reserved.
         </p>
-        <div className="flex justify-center items-center gap-x-5 mt-2 sm:mt-10">
+        <div className="flex justify-center items-center gap-x-5 mt-5 sm:mt-10">
           <Link className="bg-[#2D3250] p-3 rounded-full">
             <BsTwitterX className="h-5 w-5 text-white" />
           </Link>

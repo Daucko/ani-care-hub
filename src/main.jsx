@@ -7,8 +7,14 @@ import HomePage from './pages/HomePage';
 // import SearchModal from './pages/SearchComp/SearchInput';
 import RegisterService from './pages/Register/RegisterService';
 import RegLayout from './pages/Register/RegLayout';
-import { DocSignupForm } from './pages/signupform/DocSignupForm';
-import { SignupForm } from './pages/signupform/SignupForm';
+import {
+  DocSignupForm,
+  action as docSignupAction,
+} from './pages/signupform/DocSignupForm';
+import {
+  SignupForm,
+  action as signupAction,
+} from './pages/signupform/SignupForm';
 import SignIn from './pages/signin/SignIn';
 import SiteNav from './components/layout/SiteNav';
 import { BuyAPet } from './pages/buypet/BuyAPet';
@@ -29,8 +35,16 @@ const router = createBrowserRouter([
         element: <RegLayout />,
         children: [
           { path: '/register-service', element: <RegisterService /> },
-          { path: '/register-service/vet-signup', element: <DocSignupForm /> },
-          { path: '/register-service/signup', element: <SignupForm /> },
+          {
+            path: '/register-service/vet-signup',
+            element: <DocSignupForm />,
+            action: docSignupAction,
+          },
+          {
+            path: '/register-service/signup',
+            element: <SignupForm />,
+            action: signupAction,
+          },
         ],
       },
       { path: '/sign-in', element: <SignIn /> },

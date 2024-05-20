@@ -21,30 +21,34 @@ export function SignupForm() {
         Welcome to Aceternity
       </h2>
       <p className="text-[#2D3250] text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow
-        yet
+        Welcome onboard, please sign up to anicarehub.
       </p>
 
-      <Form className="my-8">
+      <Form className="my-8" method="post">
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname" className="text-[#2D3250]">
               First name
             </Label>
-            <Input id="firstname" placeholder="Abiodun" type="text" />
+            <Input id="firstname" placeholder="Abiodun" type="text" required />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname" className="text-[#2D3250]">
               Last name
             </Label>
-            <Input id="lastname" placeholder="Olajide" type="text" />
+            <Input id="lastname" placeholder="Olajide" type="text" required />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="school-name" className="text-[#2D3250]">
             Name of School
           </Label>
-          <Input id="school-name" placeholder="my school name" type="text" />
+          <Input
+            id="school-name"
+            placeholder="my school name"
+            type="text"
+            required
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="address" className="text-[#2D3250]">
@@ -53,6 +57,7 @@ export function SignupForm() {
           <Textarea
             id="address"
             placeholder="6 Wale Ojerinde Street, Iroko Town, Ajegunle Bus-Stop, Sango Ota, Ogun State"
+            required
           ></Textarea>
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
@@ -63,13 +68,21 @@ export function SignupForm() {
             id="email"
             placeholder="specialthanks@toGod.com"
             type="email"
+            required
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password" className="text-[#2D3250]">
             Password
           </Label>
-          <Input id="password" placeholder="••••••••" type="password" />
+          <Input
+            id="password"
+            placeholder="••••••••"
+            type="password"
+            title="Minimum 6 characters at least 1 Alphabet and 1 Number"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+            required
+          />
         </LabelInputContainer>
 
         <fieldset>
@@ -82,9 +95,9 @@ export function SignupForm() {
               <div className="">
                 <label
                   htmlFor="boarding-facility"
-                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block pe-5"
+                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 pe-5"
                 >
-                  <span className="flex items-center gap-5 block w-full">
+                  <span className="flex items-center gap-5 w-full">
                     <BsHouses className="h-5 w-5 text-[#2D3250]" />
                     Boarding facility
                   </span>
@@ -92,6 +105,7 @@ export function SignupForm() {
                     id="boarding-facility"
                     type="radio"
                     value=""
+                    required
                     name="image-picker"
                     className="peer/boarding-facility w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
@@ -108,9 +122,9 @@ export function SignupForm() {
               <div className="">
                 <label
                   htmlFor="dog-school"
-                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block pe-5"
+                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 pe-5"
                 >
-                  <span className="flex items-center gap-5 block w-full">
+                  <span className="flex items-center gap-5 w-full">
                     <GiJumpingDog className="h-5 w-5 text-[#2D3250]" />
                     Dog School
                   </span>
@@ -118,6 +132,7 @@ export function SignupForm() {
                     id="dog-school"
                     type="radio"
                     value=""
+                    required
                     name="image-picker"
                     className="peer/boarding-facility w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
@@ -131,9 +146,9 @@ export function SignupForm() {
               <div className="">
                 <label
                   htmlFor="dog-sale"
-                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 block pe-5"
+                  className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 pe-5"
                 >
-                  <span className="flex items-center gap-5 block w-full">
+                  <span className="flex items-center gap-5 w-full">
                     <FaBusinessTime className="h-5 w-5 text-[#2D3250]" />
                     Dog Sale
                   </span>
@@ -141,6 +156,7 @@ export function SignupForm() {
                     id="dog-sale"
                     type="radio"
                     value=""
+                    required
                     name="image-picker"
                     className="peer/boarding-facility w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
