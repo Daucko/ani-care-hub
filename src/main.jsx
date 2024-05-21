@@ -22,6 +22,7 @@ import { DogSchool } from './pages/DogSchool/DogSchool';
 import DogBoarding from './pages/DogBoarding/DogBording';
 import { VetPage } from './pages/Vetpage/VetPage';
 import AboutUs from './pages/AboutUs';
+import { DocDashNav } from './components/DocDashboard/DocDashNav';
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,7 @@ const router = createBrowserRouter([
       { path: '/dog-boarding', element: <DogBoarding /> },
       { path: '/vets', element: <VetPage /> },
       { path: '/about-us', element: <AboutUs /> },
-      { path: '*', element: <HomePage /> },
+      { path: '*', element: <DocDashNav /> },
     ],
   },
 ]);

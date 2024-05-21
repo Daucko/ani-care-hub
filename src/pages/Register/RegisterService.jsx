@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { RegistrationCards } from '../../components/RegisterComp/RegistrationCards';
 import { BiLeftArrowAlt } from 'react-icons/bi';
 import { useState } from 'react';
+// import { DocDashNav } from '../../components/DocDashboard/DocDashNav';
 
 const RegisterService = () => {
   const [projects, setProjects] = useState([
@@ -37,12 +38,10 @@ const RegisterService = () => {
     },
   ]);
 
-  
-
-
   return (
     <section className="mt-10">
       <RegistrationCards projects={projects} />
+      {/* <DocDashNav /> */}
     </section>
   );
 };
