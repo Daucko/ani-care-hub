@@ -1,60 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* .main {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  background: #161616;
-  min-height: 100vh;
-  padding-inline-start: 100px;
-} */
-
-.parent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  /* padding: 10px 60px; */
-  background: #242424;
-  border-radius: 30px;
-  /* margin-block: 40px; */
-  color: #444;
-  width: 100px;
-  height: 100vh;
-  /* padding-inline: 20px; */
-}
-
-.parent li {
-  list-style: none;
-}
-
-.parent li .link {
+.link {
   position: relative;
   text-decoration: none;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  /* gap: 20px; */
   align-items: center;
   width: 100px;
   height: 100px;
   z-index: 10000;
-  /* border: 3px solid red; */
-  /* margin-inline-end: 20px; */
   transform: translateX(-15px);
-  /* background-color: white; */
-}
-
-.parent li.active .link {
-  color: #c7f80d;
-  filter: drop-shadow(0 0 15px #c7f80d);
-  /* transform: translateX(50px); */
 }
 
 .marker {
@@ -107,13 +60,3 @@
   border-right: 1px solid #c7f80d;
   border-bottom: 1px solid #c7f80d;
 }
-/* 
-.link span:nth-child(2) {
-  position: absolute;
-  pointer-events: none;
-  transform: translateY(50px);
-  opacity: 0;
-  font-size: 0.8em;
-  transition: 0.5s;
-  text-transform: uppercase;
-} */

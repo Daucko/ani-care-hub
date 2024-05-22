@@ -23,6 +23,7 @@ import DogBoarding from './pages/DogBoarding/DogBording';
 import { VetPage } from './pages/Vetpage/VetPage';
 import AboutUs from './pages/AboutUs';
 import { DocDashNav } from './components/DocDashboard/DocDashNav';
+import DashNav from './components/DocDashboard/DashNav';
 
 const router = createBrowserRouter([
   {
@@ -52,9 +53,15 @@ const router = createBrowserRouter([
       { path: '/:pet', element: <BuyAPet /> },
       { path: '/dog-school', element: <DogSchool /> },
       { path: '/dog-boarding', element: <DogBoarding /> },
-      { path: '/vets', element: <VetPage /> },
+      {
+        path: '/vets',
+        element: <VetPage />,
+        children: [
+          { path: '/:vetId', element: <DocDashNav />, loader: docDashLoader },
+        ],
+      },
       { path: '/about-us', element: <AboutUs /> },
-      { path: '*', element: <DocDashNav /> },
+      { path: '*', element: <DashNav /> },
     ],
   },
 ]);
