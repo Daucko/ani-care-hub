@@ -13,6 +13,7 @@
   height: 100px;
   z-index: 10000;
   transform: translateX(-15px);
+  /* color: #00000033; */
 }
 
 .marker {

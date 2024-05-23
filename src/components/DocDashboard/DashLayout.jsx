@@ -13,18 +13,17 @@ const DashLayout = () => {
 
   const doc = Vets.find((vet) => vet.id == vetId);
 
-  const { name, id } = doc;
+  const { name, id, image } = doc;
 
   return (
     <main className=" flex w-[90vw] mx-auto border-2 border-red-500 ">
-      <section className="bg-[#7077A1] ps-24 rounded-tl-[30px]">
+      <section className="bg-[#7077A1] ps-24 rounded-tl-[30px] border-r-2 border-gray-200/90">
         <section className="bg-white w-[120px] flex justify-center items-center min-h-screen ">
           <DashNav name={name} id={id} />
         </section>
       </section>
       <section>
-        <h1>Hi</h1>
-        {/* <DashHome /> */}
+        <DashHome name={name} image={image} />
       </section>
     </main>
   );
