@@ -42,7 +42,7 @@ export function VetPage() {
             <div className="mt-3 block">
               <em className="font-semibold">Want my service?</em>{' '}
               <Link
-                to={'/'}
+                to={`/vets/${vet.id}`}
                 className="bg-[#F6B17A] rounded-full font-bold text-[0.8rem] px-2 py-1 text-[#2D3250]"
               >
                 Contact me

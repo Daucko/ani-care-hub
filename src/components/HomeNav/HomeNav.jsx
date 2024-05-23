@@ -35,9 +35,7 @@ export function HomeNav({ onSearchClick }) {
         </div>
         <div className="w-1/2 hidden sm:flex items-center justify-center gap-2">
           <Navbar className="" />
-          {/* <div className="cursor-pointer" onClick={onSearchClick}>
-            <IoSearch className="w-5 h-5 cursor-pointer" />
-          </div> */}
+
           <SearchComp />
           <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
           <div className="flex items-center gap-2">

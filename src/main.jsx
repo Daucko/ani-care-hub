@@ -24,6 +24,8 @@ import { VetPage } from './pages/Vetpage/VetPage';
 import AboutUs from './pages/AboutUs';
 import { DocDashNav } from './components/DocDashboard/DocDashNav';
 import DashNav from './components/DocDashboard/DashNav';
+import DashLayout from './components/DocDashboard/DashLayout';
+import DashHome from './components/DocDashboard/DashHome';
 
 const router = createBrowserRouter([
   {
@@ -57,7 +59,11 @@ const router = createBrowserRouter([
         path: '/vets',
         element: <VetPage />,
         children: [
-          { path: '/:vetId', element: <DocDashNav />, loader: docDashLoader },
+          {
+            path: '/vets/:vetId',
+            element: <DashLayout />,
+            children: [{ path: 'vets/:vetId/home', element: <DashHome /> }],
+          },
         ],
       },
       { path: '/about-us', element: <AboutUs /> },

@@ -1,9 +1,7 @@
-import { GoArrowRight } from 'react-icons/go';
-
-const DashHome = () => {
+const DashHome = ({ name }) => {
   return (
     <main className="border-2 border-red-600">
-      <header>Hello Doc. Tayo</header>
+      <header>Hello {name}</header>
       <section>
         <section>
           <article>
