@@ -26,6 +26,8 @@ import { DocDashNav } from './components/DocDashboard/DocDashNav';
 import DashNav from './components/DocDashboard/DashNav';
 import DashLayout from './components/DocDashboard/DashLayout';
 import DashHome from './components/DocDashboard/DashHome';
+import DashAbout from './components/DocDashboard/DashAbout';
+import DashContact from './components/DocDashboard/DashContact';
 
 const router = createBrowserRouter([
   {
@@ -58,16 +60,18 @@ const router = createBrowserRouter([
       {
         path: '/vets',
         element: <VetPage />,
+      },
+      {
+        path: '/vets/:vetId',
+        element: <DashLayout />,
         children: [
-          {
-            path: '/vets/:vetId',
-            element: <DashLayout />,
-            children: [{ path: 'vets/:vetId/home', element: <DashHome /> }],
-          },
+          { path: '/vets/:vetId/home', element: <DashHome /> },
+          { path: '/vets/:vetId/contact', element: <DashContact /> },
+          { path: '/vets/:vetId/about', element: <DashAbout /> },
         ],
       },
       { path: '/about-us', element: <AboutUs /> },
-      { path: '*', element: <DashNav /> },
+      // { path: '*', element: <DashNav /> },
     ],
   },
 ]);

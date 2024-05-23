@@ -1,3 +1,5 @@
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+
 const DashHome = ({ name }) => {
   return (
     <main className="border-2 border-red-600">
@@ -9,7 +11,7 @@ const DashHome = ({ name }) => {
             <p>Quick and convenient consultations without leaving home.</p>
             <div>
               <p>Book an Appointment</p>
-              <GoArrowRight />
+              <HiOutlineArrowNarrowRight />
             </div>
           </article>
           <article>
