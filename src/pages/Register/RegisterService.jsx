@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { RegistrationCards } from '../../components/RegisterComp/RegistrationCards';
 import { BiLeftArrowAlt } from 'react-icons/bi';
 import { useState } from 'react';
-// import { DocDashNav } from '../../components/DocDashboard/DocDashNav';
+import { LuFolderPlus } from 'react-icons/lu';
 
 const RegisterService = () => {
   const [projects, setProjects] = useState([
@@ -31,7 +31,8 @@ const RegisterService = () => {
       link: 'signup',
     },
     {
-      title: 'Do you want to render a service to Animals in another capacity?',
+      title:
+        '<LuFolderPlus /> Do you want to render a service to Animals in another capacity?',
       description:
         'We kindly encourage you to register your service to enhance its credibility and reach a wider audience effectively.',
       link: 'signup',
@@ -41,18 +42,7 @@ const RegisterService = () => {
   return (
     <section className="mt-10">
       <RegistrationCards projects={projects} />
-      {/* <DocDashNav /> */}
     </section>
   );
 };
 export default RegisterService;
-
-// export const projects = [
-
-//   //   {
-//   //     title: 'Microsoft',
-//   //     description:
-//   //       'A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.',
-//   //     link: 'https://microsoft.com',
-//   //   },
-// ];
