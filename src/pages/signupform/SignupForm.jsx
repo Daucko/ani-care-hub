@@ -6,7 +6,7 @@ import { IconBrandFacebook, IconBrandGoogle } from '@tabler/icons-react';
 import { Form, Link, redirect } from 'react-router-dom';
 import { Textarea } from '../../components/SignUp/Textarea';
 import { BsHouses } from 'react-icons/bs';
-import ImagePicker from '../../ui/ImagePicker';
+import ImagePicker from '../../ui/ImagePicker/ImagePicker';
 import { GiJumpingDog } from 'react-icons/gi';
 import { FaBusinessTime } from 'react-icons/fa';
 

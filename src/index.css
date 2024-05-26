@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.css-knqc4i-MuiDialogActions-root > :not(style) ~ :not(style) {
+  background-color: #f6b17a;
+  color: #2d3250;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color: #2d3250;
+}

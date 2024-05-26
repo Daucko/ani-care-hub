@@ -31,8 +31,7 @@ const RegisterService = () => {
       link: 'signup',
     },
     {
-      title:
-        '<LuFolderPlus /> Do you want to render a service to Animals in another capacity?',
+      title: ' Do you want to render a service to Animals in another capacity?',
       description:
         'We kindly encourage you to register your service to enhance its credibility and reach a wider audience effectively.',
       link: 'signup',

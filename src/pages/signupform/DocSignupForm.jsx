@@ -8,7 +8,7 @@ import { BiLeftArrowAlt } from 'react-icons/bi';
 import { useLoaderData, useNavigate } from 'react-router';
 import { Form, Link, redirect } from 'react-router-dom';
 import { Textarea } from '../../components/SignUp/Textarea';
-import ImagePicker from '../../ui/ImagePicker';
+import ImagePicker from '../../ui/ImagePicker/ImagePicker';
 
 export function DocSignupForm() {
   const navigate = useNavigate();
