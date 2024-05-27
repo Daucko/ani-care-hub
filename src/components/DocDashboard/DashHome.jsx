@@ -10,13 +10,11 @@ const DashHome = ({ name, image }) => {
   const [details, setDetails] = useState({
     id: 1,
     title: 'Annual therapist check-up',
-    name: 'Dauda Tijani',
+
     address: ' Agbado, Lagos. ',
     phoneNo: '08199999999',
     date: ' 28-10-2024',
   });
-
-  let updatedDetails;
 
   const newDetails = ({ title, name, address, phoneNo }) => {
     const newDetails = {
@@ -26,15 +24,14 @@ const DashHome = ({ name, image }) => {
       address,
       phoneNo,
     };
-    updatedDetails = {
+    setDetails({
       ...details,
       title: newDetails.title,
       name: newDetails.name,
       address: newDetails.address,
       phoneNo: newDetails.phoneNo,
-    };
+    });
   };
-  setDetails(updatedDetails);
 
   let apptDate;
   // const infos = details.filter((detail) => apptDate === detail.date);
@@ -83,9 +80,6 @@ const DashHome = ({ name, image }) => {
               <div className="flex items-center justify-between">
                 <h6 className="font-bold text-[#2D3250] text-[13px]">
                   {details.title}
-                </h6>
-                <h6 className="font-bold text-[#2D3250] text-[13px]">
-                  {details.name}
                 </h6>
                 <p className="text-[#2D3250] text-[11px] font-semibold">
                   last visit: 01-10-2023
