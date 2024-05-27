@@ -33,11 +33,11 @@ function CustomToolbar(props) {
   );
 }
 
-export function Calender() {
+export function Calender({ newDetails, apptDate }) {
   const [open, setOpen] = useState(false);
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
+  const removeModal = () => {
+    setOpen(!open);
   };
 
   function getRandomNumber(min, max) {
@@ -133,11 +133,21 @@ export function Calender() {
 
   const handleClick = (e) => {
     const date = new Date();
-    const eventDate = date.toISOString().split('T')[0];
-    console.log(eventDate);
+    let formattedDate = date.toISOString().split('T')[0];
+    apptDate = formattedDate;
+    // console.log(eventDate);
     setOpen(true);
-    <FormModal open={open} />;
   };
+
+  if (open) {
+    return (
+      <FormModal
+        open={open}
+        removeModal={removeModal}
+        newDetails={newDetails}
+      />
+    );
+  }
 
   return (
     <LocalizationProvider

@@ -31,13 +31,13 @@ export default function SearchComp() {
                 </button>
               </div>
               <div className="relative flex w-full flex-wrap items-stretch mb-3">
-                <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 pt-2">
+                <span className="z-10 h-full leading-snug font-normal text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 pt-2">
                   <FiSearch className="text-gray-500" />
                 </span>
                 <input
                   type="text"
                   placeholder="Placeholder"
-                  className="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-10"
+                  className="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-10"
                 />
               </div>
             </div>

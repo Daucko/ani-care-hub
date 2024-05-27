@@ -1,71 +1,142 @@
-import React from 'react';
-import * as Dialog from '@radix-ui/react-dialog';
-import { Cross2Icon } from '@radix-ui/react-icons';
+import React, { useState } from 'react';
 
-const FormModal = ({ open }) => {
-  //   const [open, setOpen] = useState(false);
+export default function FormModal({ open, removeModal, newDetails }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const values = [...formData.values()];
+
+    if (values.includes('')) {
+      alert('Please fill all the fields');
+      return;
+    }
+
+    const title = formData.get('title');
+    const name = formData.get('name');
+    const address = formData.get('address');
+    const phoneNo = formData.get('phone-num');
+
+    const formObject = Object.fromEntries(formData);
+    // console.log(formObject);
+
+    newDetails(title, name, address, phoneNo);
+
+    console.log(title, name, address, phoneNo);
+
+    e.currentTarget.reset();
+    removeModal();
+  };
 
   return (
-    <Dialog.Root open={open}>
-      <Dialog.Trigger asChild>
-        <button className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
-          Edit profile
-        </button>
-      </Dialog.Trigger>
-      <Dialog.Portal>
-        <Dialog.Overlay className="bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0" />
-        <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
-          <Dialog.Title className="text-mauve12 m-0 text-[17px] font-medium">
-            Edit profile
-          </Dialog.Title>
-          <Dialog.Description className="text-mauve11 mt-[10px] mb-5 text-[15px] leading-normal">
-            Make changes to your profile here. Click save when you're done.
-          </Dialog.Description>
-          <fieldset className="mb-[15px] flex items-center gap-5">
-            <label
-              className="text-violet11 w-[90px] text-right text-[15px]"
-              htmlFor="name"
-            >
-              Name
-            </label>
-            <input
-              className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-              id="name"
-              defaultValue="Pedro Duarte"
-            />
-          </fieldset>
-          <fieldset className="mb-[15px] flex items-center gap-5">
-            <label
-              className="text-violet11 w-[90px] text-right text-[15px]"
-              htmlFor="username"
-            >
-              Username
-            </label>
-            <input
-              className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-              id="username"
-              defaultValue="@peduarte"
-            />
-          </fieldset>
-          <div className="mt-[25px] flex justify-end">
-            <Dialog.Close asChild>
-              <button className="bg-green4 text-green11 hover:bg-green5 focus:shadow-green7 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-medium leading-none focus:shadow-[0_0_0_2px] focus:outline-none">
-                Save changes
-              </button>
-            </Dialog.Close>
-          </div>
-          <Dialog.Close asChild>
-            <button
-              className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"
-              aria-label="Close"
-            >
-              <Cross2Icon />
-            </button>
-          </Dialog.Close>
-        </Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
-  );
-};
+    <>
+      {open ? (
+        <>
+          <div className="justify-center  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-5xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg w-[400px] shadow-lg relative flex flex-col bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                  <h3 className="text-3xl font-semibold">Modal Title</h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={removeModal}
+                  >
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+                </div>
+                {/*body*/}
+                <form action="" className="pr-10" onSubmit={handleSubmit}>
+                  <fieldset className="mb-[15px] flex items-center gap-5">
+                    <label
+                      className="text-violet11 w-[90px] text-right text-[15px]"
+                      htmlFor="title"
+                    >
+                      Title
+                    </label>
+                    <input
+                      type="text"
+                      className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
+                      id="title"
+                      placeholder="Monthly Injection"
+                      name="title"
+                      required
+                    />
+                  </fieldset>
+                  <fieldset className="mb-[15px] flex items-center gap-5">
+                    <label
+                      className="text-violet11 w-[90px] text-right text-[15px]"
+                      htmlFor="name"
+                    >
+                      Client's Name
+                    </label>
+                    <input
+                      className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
+                      id="name"
+                      name="name"
+                      placeholder="Dauda Tijani"
+                      type="text"
+                      required
+                    />
+                  </fieldset>
 
-export default FormModal;
+                  <fieldset className="mb-[15px] flex items-center gap-5">
+                    <label
+                      className="text-violet11 w-[90px] text-right text-[15px]"
+                      htmlFor="address"
+                    >
+                      Address
+                    </label>
+                    <textarea
+                      className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
+                      id="address"
+                      name="address"
+                      placeholder="8 abc street, ...."
+                      required
+                    ></textarea>
+                  </fieldset>
+                  <fieldset className="mb-[15px] flex items-center gap-5">
+                    <label
+                      className="text-violet11 w-[90px] text-right text-[15px]"
+                      htmlFor="phone-num"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
+                      id="phone-num"
+                      name="phone-num"
+                      // pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                      required
+                      type="tel"
+                      placeholder="format: 000-0000-0000"
+                    />
+                  </fieldset>
+                  <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button
+                      className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="cancel"
+                      onClick={removeModal}
+                    >
+                      Close
+                    </button>
+                    <button
+                      className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="submit"
+                    >
+                      Save Changes
+                    </button>
+                  </div>
+                </form>
+                {/*footer*/}
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+    </>
+  );
+}

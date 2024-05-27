@@ -4,8 +4,41 @@ import { Calender } from '../../ui/Calender';
 import { FaLocationDot } from 'react-icons/fa6';
 import { PiPhoneFill } from 'react-icons/pi';
 import { BsCalendarDateFill } from 'react-icons/bs';
+import { useState } from 'react';
 
 const DashHome = ({ name, image }) => {
+  const [details, setDetails] = useState({
+    id: 1,
+    title: 'Annual therapist check-up',
+    name: 'Dauda Tijani',
+    address: ' Agbado, Lagos. ',
+    phoneNo: '08199999999',
+    date: ' 28-10-2024',
+  });
+
+  let updatedDetails;
+
+  const newDetails = ({ title, name, address, phoneNo }) => {
+    const newDetails = {
+      id: new Date(),
+      title,
+      name,
+      address,
+      phoneNo,
+    };
+    updatedDetails = {
+      ...details,
+      title: newDetails.title,
+      name: newDetails.name,
+      address: newDetails.address,
+      phoneNo: newDetails.phoneNo,
+    };
+  };
+  setDetails(updatedDetails);
+
+  let apptDate;
+  // const infos = details.filter((detail) => apptDate === detail.date);
+
   return (
     <main className=" w-[74vw]">
       <header className="border-b border-t pl-5 py-5 text-[#2D3250] font-bold">
@@ -42,10 +75,17 @@ const DashHome = ({ name, image }) => {
             <h1 className="font-bold text-[#2D3250] mb-5">
               Appointment Details{' '}
             </h1>
-            <div className="border border-gray-200/90 p-5 pb-20 rounded-[20px] shadow-md">
+
+            <div
+              className="border border-gray-200/90 p-5 pb-20 rounded-[20px] shadow-md"
+              // key={info.id}
+            >
               <div className="flex items-center justify-between">
                 <h6 className="font-bold text-[#2D3250] text-[13px]">
-                  Annual therapist check-up
+                  {details.title}
+                </h6>
+                <h6 className="font-bold text-[#2D3250] text-[13px]">
+                  {details.name}
                 </h6>
                 <p className="text-[#2D3250] text-[11px] font-semibold">
                   last visit: 01-10-2023
@@ -58,13 +98,13 @@ const DashHome = ({ name, image }) => {
                 <div className="bg-gray-200/90 w-full rounded-[10px] relative">
                   <p className="absolute bottom-3 left-4">
                     <FaLocationDot />
-                    Agbado, Lagos.
+                    {details.address}
                   </p>
                 </div>
                 <div className="bg-gray-200/90 w-full rounded-[10px] relative">
                   <p className="absolute bottom-3 left-4">
                     <PiPhoneFill />
-                    08199999999
+                    {details.phoneNo}
                   </p>
                 </div>
                 <div className="bg-gray-200/90 w-full rounded-[10px] relative">
@@ -99,7 +139,7 @@ const DashHome = ({ name, image }) => {
               <h3 className="font-bold text-[#2D3250]">My Appointments</h3>
             </div>
             <div className="border border-gray-200/90 p-2 rounded-[20px] my-5 shadow-md">
-              <Calender />
+              <Calender newDetails={newDetails} apptDate={apptDate} />
             </div>
           </article>
         </section>
