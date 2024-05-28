@@ -31,7 +31,7 @@ export function HomeNav({ onSearchClick }) {
         </Link>
         <Navbar className="block sm:hidden" />
         <div className=" block sm:hidden  " onClick={toggleSmallScreenMenu}>
-          <RiMenuFill className="h-10 w-10" />
+          <RiMenuFill className="h-10 w-10 dark:text-[#7E8EF1]" />
         </div>
         <div className="w-1/2 hidden sm:flex items-center justify-center gap-2">
           <Navbar className="" />

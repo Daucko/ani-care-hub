@@ -5,6 +5,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { PiPhoneFill } from 'react-icons/pi';
 import { BsCalendarDateFill } from 'react-icons/bs';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const DashHome = ({ name, image }) => {
   const [details, setDetails] = useState({
@@ -51,10 +52,10 @@ const DashHome = ({ name, image }) => {
               <p className="text-white text-[14px] font-light mt-3">
                 Quick and convenient consultations without leaving home.
               </p>
-              <div className="bg-white flex justify-center gap-2 items-center font-semibold text-[13px] text-[#2D3250] p-2 mt-16 rounded-full">
+              <Link className="bg-white flex justify-center gap-2 items-center font-semibold text-[13px] text-[#2D3250] p-2 mt-16 rounded-full">
                 <p>Book an Appointment</p>
                 <GoArrowRight className="text-[20px]" />
-              </div>
+              </Link>
             </article>
             <article className=" bg-[#7077A1]/60  p-5 rounded-[20px] h-full w-[230px] shadow-md">
               <h1 className="font-semibold">Get Doctor Home Visit!</h1>
@@ -62,10 +63,10 @@ const DashHome = ({ name, image }) => {
                 Is your pet not feeling too well? Can't get it to the hospital?
                 Invite a vet to your home!
               </p>
-              <div className="bg-white flex justify-center gap-2 items-center font-semibold text-[13px] text[#2D3250] p-2 mt-16 rounded-full">
+              <Link className="bg-white flex justify-center gap-2 items-center font-semibold text-[13px] text[#2D3250] p-2 mt-16 rounded-full">
                 <p>Book an Appointment</p>
                 <GoArrowRight className="text-[20px]" />
-              </div>
+              </Link>
             </article>
           </section>
           <section className="px-16 my-5">
