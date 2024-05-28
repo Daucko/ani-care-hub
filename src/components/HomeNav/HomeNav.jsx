@@ -21,10 +21,10 @@ export function HomeNav({ onSearchClick }) {
 
   return (
     <div>
-      <div className="relative w-full flex items-center justify-between px-4 sm:px-20">
+      <div className="relative w-full flex items-center justify-between px-4 sm:px-20 dark:bg-black">
         <Link to="/" className="">
           <img
-            src="/favicon.ico"
+            src="/images/anicarehub-logo.jpg"
             alt=""
             className="w-12 sm:w-[120px] h-9 sm:h-24 object-cover"
           />
@@ -39,7 +39,10 @@ export function HomeNav({ onSearchClick }) {
           <SearchComp />
           <span className=" w-[2px] h-10 mx-3 bg-gray-200"></span>
           <div className="flex items-center gap-2">
-            <Link to="/about-us" className="text-[#2D3250] font-semibold">
+            <Link
+              to="/about-us"
+              className="text-[#2D3250] font-semibold dark:text-[#7E8EF1]"
+            >
               About Us
             </Link>
             <Link
@@ -51,9 +54,10 @@ export function HomeNav({ onSearchClick }) {
           </div>
           <Link
             to="/sign-in"
-            className="text-[15px] text-[#2D3250] font-semibold cursor-pointer"
+            className="text-[15px] text-[#2D3250] font-semibold cursor-pointer dark:text-[#7E8EF1]"
           >
-            Sign in <FaArrowRight className="w-3 h-3 inline-block" />
+            Sign in{' '}
+            <FaArrowRight className="w-3 h-3 inline-block dark:text-[#7E8EF1]" />
           </Link>
           <Link></Link>
         </div>

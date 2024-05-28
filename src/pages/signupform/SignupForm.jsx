@@ -18,10 +18,10 @@ export function SignupForm() {
   return (
     <div className="max-w-xl w-full mx-auto mt-20 rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-[#2D3250] dark:text-neutral-200">
-        Welcome to Aceternity
+        Welcome to AniCCare Hub
       </h2>
       <p className="text-[#2D3250] text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Welcome onboard, please sign up to anicarehub.
+        Welcome onboard, please sign up to aniccarehub.
       </p>
 
       <Form className="my-8" method="post">
@@ -114,7 +114,7 @@ export function SignupForm() {
                   className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 pe-5"
                 >
                   <span className="flex items-center gap-5 w-full">
-                    <BsHouses className="h-5 w-5 text-[#2D3250]" />
+                    <BsHouses className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />
                     Boarding facility
                   </span>
                   <input
@@ -141,7 +141,7 @@ export function SignupForm() {
                   className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 pe-5"
                 >
                   <span className="flex items-center gap-5 w-full">
-                    <GiJumpingDog className="h-5 w-5 text-[#2D3250]" />
+                    <GiJumpingDog className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />
                     Dog School
                   </span>
                   <input
@@ -165,7 +165,7 @@ export function SignupForm() {
                   className="peer flex items-center ps-2 gap-2 w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 pe-5"
                 >
                   <span className="flex items-center gap-5 w-full">
-                    <FaBusinessTime className="h-5 w-5 text-[#2D3250]" />
+                    <FaBusinessTime className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />
                     Dog Sale
                   </span>
                   <input
@@ -186,7 +186,7 @@ export function SignupForm() {
         </fieldset>
 
         <button
-          className="bg-gradient-to-br relative group/btn from-[#FFBF9B] dark:from-zinc-900 dark:to-zinc-900 to-[#F6B17A] block dark:bg-zinc-800 w-full text-[#2D3250] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn from-[#FFBF9B] dark:from-zinc-900 dark:to-zinc-900 to-[#F6B17A] block dark:bg-zinc-800 w-full text-[#2D3250] dark:text-[#7E8EF1] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
           Sign up &rarr;

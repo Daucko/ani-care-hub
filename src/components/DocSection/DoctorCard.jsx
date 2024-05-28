@@ -21,7 +21,7 @@ export function DoctorCard() {
             }
           >
             <div
-              className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100 w-80"
+              className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-white hover:shadow-xl border border-zinc-100 w-80 dark:bg-black"
               key={vet.id}
             >
               <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
@@ -32,26 +32,26 @@ export function DoctorCard() {
                 />
               </div>
               <div className=" p-4">
-                <h2 className="font-bold text-center my-4 text-lg text-[#2D3250]">
+                <h2 className="font-bold text-center my-4 text-lg text-[#2D3250] dark:text-[#7E8EF1]">
                   {vet.name}
                 </h2>
-                <h2 className="font-bold text-center my-4 text-lg text-[#2D3250]">
+                <h2 className="font-bold text-center my-4 text-lg text-[#2D3250] dark:text-[#7E8EF1]">
                   Veterinarian
                 </h2>
-                <h2 className="font-normal my-4 text-sm text-center  text-[#2D3250]">
+                <h2 className="font-normal my-4 text-sm text-center  text-[#2D3250] dark:text-[#7E8EF1]">
                   {vet.bio}
                 </h2>
                 <div className="flex justify-center items-center gap-x-5 mt-10">
-                  <Link className="bg-[#7077A1]/30 p-3 rounded-full">
+                  <Link className="bg-[#7077A1]/30 p-3 rounded-full dark:text-[#7E8EF1]">
                     <BsTwitterX className="h-5 w-5" />
                   </Link>
-                  <Link className="bg-[#7077A1]/30 p-3 rounded-full">
+                  <Link className="bg-[#7077A1]/30 p-3 rounded-full dark:text-[#7E8EF1]">
                     <FaFacebookF className="h-5 w-5" />
                   </Link>
-                  <Link className="bg-[#7077A1]/30 p-3 rounded-full">
+                  <Link className="bg-[#7077A1]/30 p-3 rounded-full dark:text-[#7E8EF1]">
                     <BsInstagram className="h-5 w-5" />
                   </Link>
-                  <Link className="bg-[#7077A1]/30 p-3 rounded-full">
+                  <Link className="bg-[#7077A1]/30 p-3 rounded-full dark:text-[#7E8EF1]">
                     <FaLinkedin className="h-5 w-5" />
                   </Link>
                 </div>

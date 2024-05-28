@@ -5,7 +5,7 @@ import { dogSchools } from '../../utils/dummyData';
 
 export function DogSchool() {
   return (
-    <main className="bg-[#7077A1] ">
+    <main className="bg-[#7077A1] dark:bg-black">
       <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto w-full pb-20 pt-40 ">
         <h1 className="absolute top-[4%]  left-20 sm:left-[30%] font-bold text-[20px] sm:text-[45px] text-[#2D3250]">
           Fetch success for your pup!
@@ -18,15 +18,15 @@ export function DogSchool() {
               key={school.id}
             >
               <div className="max-w-sm">
-                <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-sm md:text-base lg:text-xl font-semibold tracking-[-0.015em] text-white">
-                  <span className="text-[#2D3250] bg-[#F6B17A] p-2 rounded-md">
+                <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-sm md:text-base lg:text-xl font-semibold tracking-[-0.015em] text-white dark:text-black">
+                  <span className="text-[#2D3250] bg-[#F6B17A] p-2 rounded-md ">
                     {school.name}
                   </span>{' '}
                   <br />
                   <br />
                   {school.advertText}
                 </h2>
-                <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+                <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200 dark:text-black">
                   {school.motto}
                 </p>
               </div>

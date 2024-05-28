@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const DogBoarding = () => {
   return (
-    <main className="py-20 bg-[#7077A1]">
+    <main className="py-20 bg-[#7077A1] dark:bg-black">
       <section className="flex flex-col sm:flex-row justify-between mx-auto w-[80vw]">
         <article className="grid grid-cols-2 gap-10">
           <img

@@ -16,7 +16,7 @@ export default function SearchComp() {
         type="button"
         onClick={() => setShowModal(true)}
       >
-        <IoSearch className="w-5 h-5 cursor-pointer" />
+        <IoSearch className="w-5 h-5 cursor-pointer dark:text-[#7E8EF1]" />
       </button>
       {showModal ? (
         <>

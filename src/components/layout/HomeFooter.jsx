@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const HomeFooter = () => {
   return (
-    <main className="border-t-1 border-[#2D3250]">
-      <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-between bg-[#7077A1] px-auto sm:px-20 py-3">
+    <main className="border-t-1 border-[#2D3250] dark:border-blue-500">
+      <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-between bg-[#7077A1] px-auto sm:px-20 py-10 dark:bg-black">
         <p className="text-white text-[12px] sm:text-[15px]">
           &copy; Copyright. All rights reserved.
         </p>

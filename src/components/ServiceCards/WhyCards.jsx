@@ -63,7 +63,9 @@ const items = [
     title: 'Why Use AniCare Hub?',
     description: 'Paws & Purpose: Where Every Tail Wag Counts!',
     header: <AllPics />,
-    icon: <BsQuestionOctagon className="h-5 w-5 text-[#2D3250]" />,
+    icon: (
+      <BsQuestionOctagon className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />
+    ),
     href: '/about-us',
   },
   {
@@ -71,7 +73,9 @@ const items = [
     title: 'The Dog Schools',
     description: 'Pawsitive Progress: Where Every Dog Finds Their Wag!.',
     header: <School />,
-    icon: <GiJumpingDog className="h-5 w-5 text-[#2D3250]" />,
+    icon: (
+      <GiJumpingDog className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />
+    ),
 
     href: '/dog-school',
   },
@@ -80,7 +84,7 @@ const items = [
     title: 'The Art of Care',
     description: 'Bark & Board: Where Every Tail Wags! And are secured.',
     header: <BoardingPic />,
-    icon: <BsHouses className="h-5 w-5 text-[#2D3250]" />,
+    icon: <BsHouses className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />,
     href: '/dog-boarding',
   },
   {
@@ -88,7 +92,9 @@ const items = [
     title: 'Animal Health Concerns',
     description: 'Compassionate Care: Where Healing Meets Heart.',
     header: <VetPic />,
-    icon: <MdOutlineHealthAndSafety className="h-5 w-5 text-[#2D3250]" />,
+    icon: (
+      <MdOutlineHealthAndSafety className="h-5 w-5 text-[#2D3250] dark:text-[#7E8EF1]" />
+    ),
     href: '/vets',
   },
 ];

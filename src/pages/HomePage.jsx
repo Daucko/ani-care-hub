@@ -6,7 +6,6 @@ import { BentoGridDemo } from '../components/ServiceCards/WhyCards';
 import DoctorsSection from '../components/DocSection/DoctorsSection';
 import ContactSection from '../components/ContactSection/ContactSection';
 import { Testimonial } from './testimonial/Testimonial';
-import Switcher from '../ui/Switcher';
 
 const HomePage = () => {
   const [popSearch, setPopSearch] = useState(false);
@@ -38,14 +37,13 @@ const HomePage = () => {
   }
 
   return (
-    <main className="">
+    <main className="dark:bg-black">
       <header>
         <Welcome />
       </header>
       <section>
         <BentoGridDemo />
       </section>
-      <Switcher />
       <section className="w-full mt-60" id="doctorSection">
         <DoctorsSection />
       </section>
@@ -56,7 +54,7 @@ const HomePage = () => {
           <ContactSection lat={latitude} long={longitude} />
         )}
       </section>
-      <section id="testimonialSection">
+      <section id="testimonialSection" className="dark:bg-black">
         <Testimonial />
       </section>
     </main>

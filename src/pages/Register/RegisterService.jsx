@@ -39,7 +39,7 @@ const RegisterService = () => {
   ]);
 
   return (
-    <section className="mt-10">
+    <section className="mt-10 ">
       <RegistrationCards projects={projects} />
     </section>
   );
