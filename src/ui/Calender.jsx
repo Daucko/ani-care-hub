@@ -33,7 +33,7 @@ function CustomToolbar(props) {
   );
 }
 
-export function Calender({ newDetails, apptDate }) {
+export function Calender({ newAppointment, apptDate }) {
   const [open, setOpen] = useState(false);
 
   const removeModal = () => {
@@ -65,8 +65,8 @@ export function Calender({ newDetails, apptDate }) {
       };
     });
   }
-
-  const initialValue = dayjs('2022-04-17');
+  const initialDate = new Date().toISOString().split('T')[0];
+  const initialValue = dayjs(`${initialDate}`);
 
   function ServerDay(props) {
     const { highlightedDays = [], day, outsideCurrentMonth, ...other } = props;
@@ -89,6 +89,8 @@ export function Calender({ newDetails, apptDate }) {
       </Badge>
     );
   }
+
+  const [selectedDate, setSelectedDate] = useState(initialValue);
 
   const requestAbortController = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -131,11 +133,10 @@ export function Calender({ newDetails, apptDate }) {
     fetchHighlightedDays(date);
   };
 
-  const handleClick = (e) => {
-    const date = new Date();
-    let formattedDate = date.toISOString().split('T')[0];
-    apptDate = formattedDate;
-    // console.log(eventDate);
+  const handleClick = (newValue) => {
+    setSelectedDate(newValue);
+    apptDate = newValue.$d.toISOString().split('T')[0];
+    // console.log(apptDate);
     setOpen(true);
   };
 
@@ -144,11 +145,10 @@ export function Calender({ newDetails, apptDate }) {
       <FormModal
         open={open}
         removeModal={removeModal}
-        newDetails={newDetails}
+        newAppointment={newAppointment}
       />
     );
   }
-
   return (
     <LocalizationProvider
       dateAdapter={AdapterDayjs}
@@ -163,7 +163,7 @@ export function Calender({ newDetails, apptDate }) {
         displayWeekNumber
         showDaysOutsideCurrentMonth
         fixedWeekNumber={6}
-        defaultValue={initialValue}
+        value={selectedDate}
         loading={isLoading}
         onMonthChange={handleMonthChange}
         renderLoading={() => <DayCalendarSkeleton />}

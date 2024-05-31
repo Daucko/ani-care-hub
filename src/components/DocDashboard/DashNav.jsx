@@ -12,12 +12,10 @@ const DashNav = ({ name, id }) => {
       <ul className={classes.parent}>
         <li
           className={
-            location.pathname === `/vets/${id}/home`
-              ? 'group active relative'
-              : ''
+            location.pathname === `/vets/${id}` ? 'group active relative' : ''
           }
         >
-          <Link to={`/vets/${id}/home`} className={classes.link}>
+          <Link to={`/vets/${id}`} className={classes.link}>
             <span>
               <IoHome className="text-gray-400/50 pointer-events-none group-[.active]:text-[#2D3250] group-[.active]:drop-shadow-xl text-[2em] transition duration-[0.5s] hover:text-[#2D3250] hover:drop-shadow-xl " />
             </span>

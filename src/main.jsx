@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         path: '/vets/:vetId',
         element: <DashLayout />,
         children: [
-          { path: '/vets/:vetId/home', element: <DashHome /> },
+          { path: '/vets/:vetId', element: <DashHome /> },
           { path: '/vets/:vetId/contact', element: <DashContact /> },
           { path: '/vets/:vetId/about', element: <DashAbout /> },
         ],

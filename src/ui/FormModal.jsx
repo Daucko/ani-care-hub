@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
 
-export default function FormModal({ open, removeModal, newDetails }) {
+export default function FormModal({ open, removeModal, newAppointment }) {
+  const [title, setTitle] = useState();
+  const [clientName, setClientName] = useState();
+  const [address, setAddress] = useState();
+  const [phoneNo, setPhoneNo] = useState();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const values = [...formData.values()];
+    const date = new Date().toISOString().split('T')[0];
 
-    if (values.includes('')) {
-      alert('Please fill all the fields');
-      return;
-    }
+    // const formData = new FormData(e.currentTarget);
+    // const values = [...formData.values()];
 
-    const title = formData.get('title');
-    const name = formData.get('name');
-    const address = formData.get('address');
-    const phoneNo = formData.get('phone-num');
+    // if (values.includes('')) {
+    //   alert('Please fill all the fields');
+    //   return;
+    // }
 
-    const formObject = Object.fromEntries(formData);
-    // console.log(formObject);
+    // const title = formData.get('title');
+    // const name = formData.get('name');
+    // const address = formData.get('address');
+    // const phoneNo = formData.get('phone-num');
 
-    newDetails(title, name, address, phoneNo);
+    // const formObject = Object.fromEntries(formData);
 
-    console.log(title, name, address, phoneNo);
+    // newDetails(title, name, address, phoneNo);
 
-    e.currentTarget.reset();
+    // console.log(title, name, address, phoneNo);
+
+    // e.currentTarget.reset();
+    console.log('Hello from FormModal', title, clientName, address, phoneNo,);
+    newAppointment(title, clientName, address, phoneNo, date,);
     removeModal();
   };
 
@@ -60,9 +68,13 @@ export default function FormModal({ open, removeModal, newDetails }) {
                       type="text"
                       className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
                       id="title"
-                      placeholder="Monthly Injection"
                       name="title"
                       required
+                      placeholder="Title of the appointment"
+                      value={title}
+                      onChange={(e) => {
+                        setTitle(e.target.value);
+                      }}
                     />
                   </fieldset>
                   <fieldset className="mb-[15px] flex items-center gap-5">
@@ -76,9 +88,13 @@ export default function FormModal({ open, removeModal, newDetails }) {
                       className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
                       id="name"
                       name="name"
-                      placeholder="Dauda Tijani"
                       type="text"
                       required
+                      placeholder="Client Name"
+                      value={clientName}
+                      onChange={(e) => {
+                        setClientName(e.target.value);
+                      }}
                     />
                   </fieldset>
 
@@ -93,8 +109,12 @@ export default function FormModal({ open, removeModal, newDetails }) {
                       className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
                       id="address"
                       name="address"
-                      placeholder="8 abc street, ...."
+                      placeholder="City, State"
                       required
+                      value={address}
+                      onChange={(e) => {
+                        setAddress(e.target.value);
+                      }}
                     ></textarea>
                   </fieldset>
                   <fieldset className="mb-[15px] flex items-center gap-5">
@@ -108,10 +128,14 @@ export default function FormModal({ open, removeModal, newDetails }) {
                       className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
                       id="phone-num"
                       name="phone-num"
-                      // pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                      pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
                       required
                       type="tel"
-                      placeholder="format: 000-0000-0000"
+                      placeholder="format: 020-0000-0000"
+                      value={phoneNo}
+                      onChange={(e) => {
+                        setPhoneNo(e.target.value);
+                      }}
                     />
                   </fieldset>
                   <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
