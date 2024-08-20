@@ -41,7 +41,7 @@ const HomePage = () => {
       <header>
         <Welcome />
       </header>
-      <section>
+      <section className="mt-12">
         <BentoGridDemo />
       </section>
       <section className="w-full mt-60" id="doctorSection">
