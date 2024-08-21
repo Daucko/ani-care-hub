@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-// import Image from 'next/image';
 
 const transition = {
   type: 'spring',
@@ -17,7 +16,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-[12px] sm:text-[15px] font-semibold leading-6 text-[#2D3250] hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-[0.75rem] lg:text-[0.938rem] font-semibold leading-6 text-[#2D3250] hover:opacity-[0.9] dark:text-white"
       >
         {item}
       </motion.p>
@@ -31,15 +30,10 @@ export const MenuItem = ({ setActive, active, item, children }) => {
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
-                // layoutId ensures smooth animation
                 layoutId="active"
                 className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
-                <motion.div
-                  // layout ensures smooth animation
-                  layout
-                  className="w-max h-full p-1 sm:p-4"
-                >
+                <motion.div layout className="w-max h-full p-1 lg:p-4">
                   {children}
                 </motion.div>
               </motion.div>
@@ -54,9 +48,8 @@ export const MenuItem = ({ setActive, active, item, children }) => {
 export const Menu = ({ setActive, children }) => {
   return (
     <nav
-      // resets the state
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex justify-center space-x-4 sm:space-x-8 px-2 sm:px-4 py-2 sm:py-4 "
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-transparent shadow-input flex justify-center space-x-4 lg:space-x-8 px-2 lg:px-4 py-2 lg:py-4 "
     >
       {children}
     </nav>
@@ -74,10 +67,10 @@ export const ProductItem = ({ title, description, href, src }) => {
         className="flex-shrink-0 rounded-md shadow-2xl "
       />
       <div>
-        <h4 className="text-[13px] sm:text-base font-extrabold sm:font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-[0.813rem] lg:text-base font-extrabold lg:font-bold mb-1 text-black dark:text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-[12px] sm:text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-700 text-[0.75rem] lg:text-sm max-w-[10rem] dark:text-neutral-300">
           {description}
         </p>
       </div>

@@ -21,19 +21,19 @@ export function HomeNav({ onSearchClick }) {
 
   return (
     <div>
-      <div className="relative w-full flex items-center justify-between px-4 sm:px-20 dark:bg-black">
+      <div className="relative w-full flex items-center justify-between px-4 lg:px-20 dark:bg-black">
         <Link to="/" className="">
           <img
             src="/images/anicarehub-logo.jpg"
             alt=""
-            className="w-12 sm:w-[120px] h-9 sm:h-24 object-cover"
+            className="w-12 lg:w-[7.5rem] h-9 lg:h-24 object-cover"
           />
         </Link>
-        <Navbar className="block sm:hidden" />
-        <div className=" block sm:hidden  " onClick={toggleSmallScreenMenu}>
+        <Navbar className="block lg:hidden" />
+        <div className=" block lg:hidden  " onClick={toggleSmallScreenMenu}>
           <RiMenuFill className="h-10 w-10 dark:text-[#7E8EF1]" />
         </div>
-        <div className="w-1/2 hidden sm:flex items-center justify-center gap-2">
+        <div className="w-1/2 hidden lg:flex items-center justify-center gap-2">
           <Navbar className="" />
 
           <SearchComp />
@@ -47,14 +47,14 @@ export function HomeNav({ onSearchClick }) {
             </Link>
             <Link
               to="/register-service"
-              className="bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 dark:text-white"
+              className="bg-[#F6B17A] text-[#2D3250] text-[0.938rem] font-semibold leading-6 rounded-full p-3 dark:text-white"
             >
               Register a Service
             </Link>
           </div>
           <Link
             to="/sign-in"
-            className="text-[15px] text-[#2D3250] font-semibold cursor-pointer dark:text-[#7E8EF1]"
+            className="text-[0.938rem] text-[#2D3250] font-semibold cursor-pointer dark:text-[#7E8EF1]"
           >
             Sign in{' '}
             <FaArrowRight className="w-3 h-3 inline-block dark:text-[#7E8EF1]" />
@@ -63,20 +63,20 @@ export function HomeNav({ onSearchClick }) {
         </div>
       </div>
       {showMenu && (
-        <div className="relative bg-white  top-6 left-0 w-full h-full flex-col sm:hidden justify-center items-center space-y-4 p-5">
+        <div className="relative bg-white  top-6 left-0 w-full h-full flex-col lg:hidden justify-center items-center space-y-4 p-5">
           <div className="relative flex w-full flex-wrap items-stretch mb-3">
-            <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 pt-2">
+            <span className="z-10 h-full leading-snug font-normal text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 pt-2">
               <FiSearch className="text-gray-500" />
             </span>
             <input
               type="text"
               placeholder="Placeholder"
-              className="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-10"
+              className="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full pl-10"
             />
           </div>
           <Link
             to="/register-service"
-            className="block my-4 ml-0 bg-[#F6B17A] text-[#2D3250] text-[15px] font-semibold leading-6 rounded-full p-3 w-max dark:text-white"
+            className="block my-4 ml-0 bg-[#F6B17A] text-[#2D3250] text-[0.938rem] font-semibold leading-6 rounded-full p-3 w-max dark:text-white"
           >
             Register a Service
           </Link>
@@ -87,10 +87,9 @@ export function HomeNav({ onSearchClick }) {
             Sign in <FaArrowRight className="w-3 h-3 inline-block" />
           </Link>
           <div
-            className="absolute text-2xl -top-7 right-2 block sm:hidden "
+            className="absolute text-2xl -top-7 right-2 block lg:hidden "
             onClick={toggleSmallScreenMenu}
           >
-            {/* <input type="search" name=""  /> */}
             <TbX className="" />
           </div>
         </div>
@@ -105,19 +104,8 @@ function Navbar({ className, pet }) {
   return (
     <div className={cn('z-50', className)}>
       <Menu setActive={setActive}>
-        {/* <MenuItem setActive={setActive} active={active} item="Doctors">
-          <div className="flex flex-col space-y-4 text-sm">
-            {Vets.map((vet) => {
-              return (
-                <HoveredLink href="/vets" key={vet.id}>
-                  {vet.name}
-                </HoveredLink>
-              );
-            })}
-          </div>
-        </MenuItem> */}
         <MenuItem setActive={setActive} active={active} item="Service">
-          <div className="  text-sm grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10 p-4">
+          <div className="  text-sm grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 p-4">
             <ProductItem
               title="Veterinarian"
               href="/vets"
@@ -148,8 +136,6 @@ function Navbar({ className, pet }) {
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink to={`/dog`}>Dog</HoveredLink>
             <HoveredLink to={`/cat`}>Cat</HoveredLink>
-            {/* <HoveredLink href="/team">Team</HoveredLink> */}
-            {/* <HoveredLink href="/enterprise">Enterprise</HoveredLink> */}
           </div>
         </MenuItem>
       </Menu>
