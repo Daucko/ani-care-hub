@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-#'django-insecure-nq5=6$ot4(1=i02_g&82-@2zkke5lr)wg^qmr3@fculrzt@id('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true" 
@@ -92,7 +91,6 @@ DATABASES = {
 
 database_url = os.environ.get("DATABASE_URL")
 DATABASES['default'] = dj_database_url.parse(database_url) # type: ignore
-#"postgresql://anicarehub_django_render_user:oj2VVx5Y10KLk3EZjSdRGAR9Ja6MTIZi@dpg-csdtrqqj1k6c73fpfu7g-a.oregon-postgres.render.com/anicarehub_django_render"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -138,7 +136,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'https://ani-care-hub.vercel.app'
+]
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 
