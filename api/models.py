@@ -14,13 +14,13 @@ class Doctor(models.Model):
     image = models.ImageField(upload_to='images/')
     bio = models.TextField()
     x_link = models.URLField()
-    facebook_name = models.URLField()
+    facebook_link = models.URLField()
     instagram_link = models.URLField()
-    linked_link = models.URLField()
+    linked_in_link = models.URLField()
 
     def save(self, *args, **kwargs):
-        if not self.pk:  # if it's a new instance
-            self.password = make_password(self.password)  # Hash password before saving
+        if not self.pk: 
+            self.password = make_password(self.password) 
         super(Doctor, self).save(*args, **kwargs)
 
     def __str__(self):
