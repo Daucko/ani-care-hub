@@ -1,16 +1,25 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { BackgroundGradient } from '../../components/buypet/BackgroundGradient';
 import { Vets } from '../../utils/dummyData';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
 export function VetPage() {
+  const[vets, setVets] = useState()
   // const { pet } = useParams();
+
+  useEffect(()=> {
+    fetch("https://ani-care-hub.onrender.com/api/doctors")
+    .then((response) => response.json())
+    .then((data) => {
+      setVets(data.doctors)
+    }).catch(error => console.error('Error:', error))
+  }, [])
 
   return (
     <main className="dark:bg-black">
       <div className="grid sm:grid-cols-3 justify-center place-content-center gap-16 w-[80vw] mx-auto py-20">
-        {Vets.map((vet) => {
+        {vets ? vets.map((vet) => {
           return (
             <BackgroundGradient
               className="rounded-[22px] max-w-sm p-4 sm:p-10 min-h-full bg-white dark:bg-zinc-900"
@@ -53,7 +62,7 @@ export function VetPage() {
               </div>
             </BackgroundGradient>
           );
-        })}
+        }  ) : null}
       </div>
     </main>
   );
